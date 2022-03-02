@@ -1,45 +1,26 @@
-    async function getPhotographers() {
-        // Penser à remplacer par les données récupérées dans le json
-        const photographers = [
-            {
-                "name": "Ma data test",
-                "id": 1,
-                "city": "Paris",
-                "country": "France",
-                "tagline": "Ceci est ma data test",
-                "price": 400,
-                "portrait": "account.png"
-            },
-            {
-                "name": "Autre data test",
-                "id": 2,
-                "city": "Londres",
-                "country": "UK",
-                "tagline": "Ceci est ma data test 2",
-                "price": 500,
-                "portrait": "account.png"
-            },
-        ]
-        // et bien retourner le tableau photographers seulement une fois
-        return ({
-            photographers: [...photographers, ...photographers, ...photographers]})
-    }
+import { getDatas } from "../../data/getDatas.js";
 
-    async function displayData(photographers) {
-        const photographersSection = document.querySelector(".photographer_section");
+const dataPhotographers = [];
 
-        photographers.forEach((photographer) => {
-            const photographerModel = photographerFactory(photographer);
-            const userCardDOM = photographerModel.getUserCardDOM();
-            photographersSection.appendChild(userCardDOM);
-        });
-    };
+// Penser à remplacer par les données récupérées dans le json
+const displayData = async () => {
+  await getDatas(dataPhotographers, "photographers");
+  const photographersSection = document.querySelector(".photographer_section");
+  const picture = "../assets/images/Sample_Photos/Photographers_ID_Photos/";  
+  photographersSection.innerHTML = dataPhotographers
+    .map(
+      (photograph) =>
+        `
+        <article>
+            <img src=${picture}${photograph.portrait}>
+            <h2>${photograph.name}</h2>
+            <h3>${photograph.city}, ${photograph.country}</h3>
+            <p>${photograph.tagline}</p>
+            <h4>${photograph.price}€/jour</h4>
+        </article>
+        `
+    )
+    .join("");
+};
 
-    async function init() {
-        // Récupère les datas des photographes
-        const { photographers } = await getPhotographers();
-        displayData(photographers);
-    };
-    
-    init();
-    
+displayData();
