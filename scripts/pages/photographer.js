@@ -1,5 +1,5 @@
 import { getDatas } from "../../data/getDatas.js";
-let dataMedia = [];
+const dataMedia = [];
 
 const displayMedia = async () => {
   await getDatas(dataMedia, "media");

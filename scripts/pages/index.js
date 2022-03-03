@@ -3,10 +3,10 @@ import { getDatas } from "../../data/getDatas.js";
 const dataPhotographers = [];
 
 // Penser à remplacer par les données récupérées dans le json
-const displayData = async () => {
+const displayPhotographers = async () => {
   await getDatas(dataPhotographers, "photographers");
   const photographersSection = document.querySelector(".photographer_section");
-  const picture = "../assets/images/Sample_Photos/Photographers_ID_Photos/";  
+  const picture = "assets/images/Sample_Photos/Photographers_ID_Photos/";
   photographersSection.innerHTML = dataPhotographers
     .map(
       (photograph) =>
@@ -23,4 +23,4 @@ const displayData = async () => {
     .join("");
 };
 
-displayData();
+displayPhotographers();
