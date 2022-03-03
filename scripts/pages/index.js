@@ -6,7 +6,11 @@ const dataPhotographers = [];
 const displayPhotographers = async () => {
   await getDatas(dataPhotographers, "photographers");
   const photographersSection = document.querySelector(".photographer_section");
+<<<<<<< HEAD
   const picture = "assets/images/Sample_Photos/Photographers_ID_Photos/";
+=======
+  const picture = "assets/images/Sample_Photos/Photographers_ID_Photos/";  
+>>>>>>> 95d707e045306236ab38d29a4b90a9aec6fd4495
   photographersSection.innerHTML = dataPhotographers
     .map(
       (photograph) =>
