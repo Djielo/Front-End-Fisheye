@@ -1,10 +1,9 @@
-@import url("photographer.css");
-
 body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
 }
 
+/******************************************************* HEADER */
 header {
   display: flex;
   flex-direction: row;
@@ -28,6 +27,7 @@ h1 {
   font-weight: normal;
 }
 
+/******************************************************* MAIN */
 main {
   width: 100%;
   height: auto;

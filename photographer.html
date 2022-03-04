@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
     <link rel="icon" type="image/ico" href="assets/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
@@ -12,10 +12,14 @@
       <img src="assets/images/logo.png" class="logo" />
     </header>
     <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+      <div class="photograph_header">
+        <div class="photograph_info"></div>
+        <div class="photograph_contact"><button class="contact_button" onclick="displayModal()">Contactez-moi</button></div>
+        <div class="photograph_picture"></div>
       </div>
+      <div class="dropdown-open"></div>
     </main>
+    <div class="datas_cta"></div>
     <div id="contact_modal">
       <div class="modal">
         <header>
@@ -31,7 +35,7 @@
         </form>
       </div>
     </div>
-    <script src="./scripts/pages/photographer.js" type="module"></script>    
-    <script src="/scripts/utils/contactForm.js"></script>
+    <script src="scripts/pages/photographer.js" type="module"></script>
+    <script src="scripts/utils/contactForm.js"></script>
   </body>
 </html>
