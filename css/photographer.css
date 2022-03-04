@@ -5,13 +5,13 @@ body {
 /******************************************************* HEADER */
 header {
   position: absolute;
+  top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 90px;
   width: 100%;
-  top: 30px;
 }
 
 .logo {
@@ -22,62 +22,62 @@ header {
 /******************************************************* MAIN */
 main {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
-  top: 200px;
+  top: 140px;
 }
 
-.datas_cta {
-  height: 89px;
-  width: 376px;
-  right: 5%;
-  bottom: -15px;
-  border-radius: 5px;
-  background: #db8876;
-  position: absolute;
-}
-
+/***************************** Infos, contact et photo du photograph */
 .photograph_header {
-  position: absolute;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 313px;
+  height: 280px;
   width: 90%;
-  left: 5%;
-  right: 5%;
   border-radius: 0px;
   background-color: #fafafa;
 }
 
-.photograph_info article h2 {
-  font-size: 36px;
+/*************** Infos */
+.photograph_profile {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  height: 100%;
+  padding-left: 150px;
+}
+
+.photograph_profile h2 {
+  font-size: 64px;
   font-style: normal;
   font-weight: 400;
-  line-height: 47px;
-  text-align: center;
-  margin: 18px 0 0 0;
+  line-height: 83px;  
+  margin: 0;
   color: #d3573c;
 }
 
-.photograph_info article h3 {
-  font-size: 13px;
+.photograph_profile h3 {
+  font-size: 24px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 16.93px;
-  text-align: center;
-  margin: 0;
+  font-weight: 400;
+  line-height: 31px;  
+  margin: 10px 0;  
   color: #901c1c;
 }
 
-.photograph_info article p {
-  font-size: 10px;
+.photograph_profile p {
+  font-size: 18px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 13.02px;
-  margin: 0;
-  text-align: center;
+  font-weight: 400;
+  line-height: 23px;
+  margin: 10px 0 0 0;  
 }
 
+/*************** Contact */
 .photograph_contact {
   display: flex;
   align-items: center;
@@ -97,13 +97,111 @@ main {
   cursor: pointer;
 }
 
-.photograph_picture article img {
+/*************** Picture */
+.photograph_picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photograph_picture img {
   height: 15vw;
   width: 15vw;
   border-radius: 50%;
   object-fit: cover;
 }
 
+/***************************** Tri */
+.photograph_sort {
+  display: flex;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.photograph_sort .tri_text,
+.photograph_sort .tri_dropdown_open {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  text-align: left;
+}
+
+.photograph_sort .tri_text {
+  margin: 0 30px 0 -10px;
+}
+
+/***************************** Images */
+.photograph_images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 20px;
+  column-gap: 120px;
+  width: 90%;
+  height: max-content;
+  margin-top: 50px;
+}
+
+.photograph_images article {
+  width: 100%;
+  height: max-content;
+}
+
+.photograph_images article img {
+  width: 100%;
+  aspect-ratio: 3.5/3;
+  object-fit: cover;
+}
+
+.photograph_images article p {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  margin: 12px 0;
+}
+
+.photograph_images article div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  color: #901c1c;
+}
+
+.number {
+  margin-right: 10px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+}
+
+.fa-heart {
+}
+/***************************** Likes et taux journalier */
+.cta_all {
+  z-index: 5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 65px;
+  width: 376px;
+  right: 5%;
+  bottom: 0;
+  border-radius: 5px;
+  background: #db8876;
+  position: fixed;
+}
+
+.cta_heart,
+.cta_days {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px;
+}
 /******************************************************* MODAL */
 #contact_modal {
   display: none;
