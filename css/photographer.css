@@ -32,7 +32,7 @@ main {
 }
 
 /***************************** Infos, contact et photo du photograph */
-.photograph_header {
+.photographer_header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 280px;
@@ -42,7 +42,7 @@ main {
 }
 
 /*************** Infos */
-.photograph_profile {
+.photographer_profile {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -51,34 +51,34 @@ main {
   padding-left: 150px;
 }
 
-.photograph_profile h2 {
+.photographer_profile h2 {
   font-size: 64px;
   font-style: normal;
   font-weight: 400;
-  line-height: 83px;  
+  line-height: 83px;
   margin: 0;
   color: #d3573c;
 }
 
-.photograph_profile h3 {
+.photographer_profile h3 {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 31px;  
-  margin: 10px 0;  
+  line-height: 31px;
+  margin: 10px 0;
   color: #901c1c;
 }
 
-.photograph_profile p {
+.photographer_profile p {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 23px;
-  margin: 10px 0 0 0;  
+  margin: 10px 0 0 0;
 }
 
 /*************** Contact */
-.photograph_contact {
+.photographer_contact {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,13 +98,13 @@ main {
 }
 
 /*************** Picture */
-.photograph_picture {
+.photographer_picture {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.photograph_picture img {
+.photographer_picture img {
   height: 15vw;
   width: 15vw;
   border-radius: 50%;
@@ -112,14 +112,14 @@ main {
 }
 
 /***************************** Tri */
-.photograph_sort {
+.photographer_sort {
   display: flex;
   width: 90%;
   margin-top: 20px;
 }
 
-.photograph_sort .tri_text,
-.photograph_sort .tri_dropdown_open {
+.photographer_sort .tri_text,
+.photographer_sort .tri_dropdown_open {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -127,12 +127,12 @@ main {
   text-align: left;
 }
 
-.photograph_sort .tri_text {
+.photographer_sort .tri_text {
   margin: 0 30px 0 -10px;
 }
 
 /***************************** Images */
-.photograph_images {
+.photographer_images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -143,18 +143,18 @@ main {
   margin-top: 50px;
 }
 
-.photograph_images article {
+.photographer_images article {
   width: 100%;
   height: max-content;
 }
 
-.photograph_images article img {
+.photographer_images article img {
   width: 100%;
   aspect-ratio: 3.5/3;
   object-fit: cover;
 }
 
-.photograph_images article p {
+.photographer_images article p {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -162,7 +162,7 @@ main {
   margin: 12px 0;
 }
 
-.photograph_images article div {
+.photographer_images article div {
   display: flex;
   justify-content: space-between;
   align-items: center;
