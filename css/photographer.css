@@ -178,8 +178,6 @@ main {
   line-height: 31px;
 }
 
-.fa-heart {
-}
 /***************************** Likes et taux journalier */
 .cta_all {
   z-index: 5;
@@ -208,9 +206,15 @@ main {
 }
 
 .modal {
+  position: fixed;
+  top: 20%;
+  bottom: 20%;
+  left: 20%;
+  right: 20%;
   border-radius: 5px;
   background-color: #db8876;
-  width: 50%;
+  width: 40%;
+  height: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,8 +224,14 @@ main {
 }
 
 .modal header {
-  justify-content: space-between;
-  width: 100%;
+  width: 90%;
+  height: max-content;
+  margin-top: 5px;
+  font-family: DM Sans;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 83px;
 }
 
 .modal header img {
@@ -232,13 +242,15 @@ main {
   font-size: 64px;
   font-weight: normal;
   text-align: center;
+  margin: 0;
 }
 
 form {
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: flex-start;
+  width: 90%;
+  padding-top: 200px;
 }
 
 form label {
@@ -259,4 +271,11 @@ form input {
   height: 68px;
   border: none;
   border-radius: 5px;
+}
+
+form textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+  max-height: 250px;
 }
