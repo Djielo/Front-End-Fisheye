@@ -10,35 +10,37 @@
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="logo" />
+      </a>
     </header>
-    <main id="main">    
-      <div class="photographer_header"></div>  
+    <main id="main">
+      <div class="photographer_header"></div>
       <div class="photographer_sort">
         <div class="tri_text">Trier par</div>
         <div class="tri_dropdown_open">PopDateTitle</div>
       </div>
-      <section class="photographer_images">        
-      </section>
+      <section class="photographer_images"></section>
     </main>
     <div class="cta_all">
-      <div class="cta_heart">297081 <i class="fas fa-heart"></i></div>
-      <div class="cta_days">300€ / jour</div>
+      <div class="cta_heart"></div>
+      <div class="cta_days"></div>
     </div>
     <div id="contact_modal">
       <div class="modal">
         <header>
           <h2>Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <h2 class="modal_photographer_name"></h2>
         </header>
         <form>
           <div>
             <label for="prenom">Prénom</label>
-            <input id="prenom" type="text" name="prenom"/>
+            <input id="prenom" type="text" name="prenom" />
             <label for="nom">Nom</label>
-            <input id="nom" type="text" name="nom"/>
+            <input id="nom" type="text" name="nom" />
             <label for="email">Email</label>
-            <input id="email" type="text" name="email"/>
+            <input id="email" type="text" name="email" />
             <label for="message">Votre message</label>
             <textarea id="message" type="text" name="message"></textarea>
           </div>

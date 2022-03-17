@@ -15,7 +15,7 @@ header {
 }
 
 .logo {
-  height: 60px;
+  height: clamp(1.875rem, 0.1014rem + 4.0541vw, 3.75rem);
   margin-left: 100px;
 }
 
@@ -35,7 +35,7 @@ main {
 .photographer_header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 280px;
+  height: max-content;
   width: 90%;
   border-radius: 0px;
   background-color: #fafafa;
@@ -48,33 +48,30 @@ main {
   align-items: left;
   justify-content: center;
   height: 100%;
-  padding-left: 150px;
+  padding-left: 6vw;
 }
 
 .photographer_profile h2 {
-  font-size: 64px;
+  font-size: clamp(1rem, -1.5946rem + 6.2162vw, 4rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 83px;
   margin: 0;
   color: #d3573c;
 }
 
 .photographer_profile h3 {
-  font-size: 24px;
+  font-size: clamp(0.75rem, 0.0405rem + 1.6216vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 31px;
-  margin: 10px 0;
+  margin: 5px 0;
   color: #901c1c;
 }
 
 .photographer_profile p {
-  font-size: 18px;
+  font-size: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem);
   font-style: normal;
   font-weight: 400;
-  line-height: 23px;
-  margin: 10px 0 0 0;
+  margin: 5px 0;
 }
 
 /*************** Contact */
@@ -85,12 +82,12 @@ main {
 }
 
 .contact_button {
-  font-size: 20px;
+  font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem);
   font-weight: bold;
   color: white;
   padding: 11px;
-  width: 170px;
-  height: 70px;
+  width: clamp(5.3125rem, 2.1115rem + 9.4595vw, 10.625rem);
+  height: clamp(2.1875rem, 0.1182rem + 4.7297vw, 4.375rem);
   border: none;
   background-color: #901c1c;
   border-radius: 5px;
@@ -115,15 +112,15 @@ main {
 .photographer_sort {
   display: flex;
   width: 90%;
+  height: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem);
   margin-top: 20px;
 }
 
 .photographer_sort .tri_text,
 .photographer_sort .tri_dropdown_open {
-  font-size: 18px;
+  font-size: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem);
   font-style: normal;
   font-weight: 700;
-  line-height: 23px;
   text-align: left;
 }
 
@@ -136,8 +133,8 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  row-gap: 20px;
-  column-gap: 120px;
+  row-gap: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem);
+  column-gap: clamp(3.75rem, 0.2027rem + 8.1081vw, 7.5rem);
   width: 90%;
   height: max-content;
   margin-top: 50px;
@@ -155,7 +152,7 @@ main {
 }
 
 .photographer_images article p {
-  font-size: 24px;
+  font-size: clamp(0.75rem, 0.0405rem + 1.6216vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
   line-height: 31px;
@@ -170,12 +167,16 @@ main {
   color: #901c1c;
 }
 
-.number {
+.localCounter {
   margin-right: 10px;
-  font-size: 24px;
+  font-size: clamp(0.75rem, 0.0405rem + 1.6216vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
   line-height: 31px;
+}
+
+.liked {
+  color: #d3573c;
 }
 
 /***************************** Likes et taux journalier */
@@ -207,14 +208,15 @@ main {
 
 .modal {
   position: fixed;
-  top: 20%;
-  bottom: 20%;
-  left: 20%;
-  right: 20%;
+  top: 5%;
+  left: 10%;
+  /* bottom: 10%; */
+  right: 10%;
   border-radius: 5px;
   background-color: #db8876;
-  width: 40%;
+  width: clamp(25rem, 15.5405rem + 21.6216vw, 35rem);
   height: max-content;
+  /* min-height: 700px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -225,24 +227,28 @@ main {
 
 .modal header {
   width: 90%;
-  height: max-content;
-  margin-top: 5px;
-  font-family: DM Sans;
-  font-size: 64px;
+  height: 50px;  
+  font-size: clamp(2rem, 0.1081rem + 4.3243vw, 4rem);
   font-style: normal;
-  font-weight: 400;
-  line-height: 83px;
+  font-weight: 400;  
 }
 
 .modal header img {
   cursor: pointer;
+  width: clamp(1.25rem, -0.5236rem + 4.0541vw, 3.125rem);
+  aspect-ratio: 1/1;
 }
 
 .modal header h2 {
-  font-size: 64px;
+  font-size: clamp(2rem, 0.1081rem + 4.3243vw, 4rem);
   font-weight: normal;
   text-align: center;
   margin: 0;
+}
+
+.modal header .modal_photographer_name {
+  position: absolute;
+  top: 55px;
 }
 
 form {
@@ -250,12 +256,12 @@ form {
   flex-direction: column;
   align-items: flex-start;
   width: 90%;
-  padding-top: 200px;
+  padding-top: clamp(6.25rem, 0.3378rem + 13.5135vw, 12.5rem);
 }
 
 form label {
   color: #312e2e;
-  font-size: 36px;
+  font-size: clamp(1.125rem, 0.0608rem + 2.4324vw, 2.25rem);
 }
 
 form div {
@@ -263,19 +269,19 @@ form div {
   flex-direction: column;
   width: 100%;
   align-items: self-start;
-  margin-bottom: 26px;
+  margin-bottom: clamp(0.8125rem, 0.0439rem + 1.7568vw, 1.625rem);
 }
 
 form input {
   width: 100%;
-  height: 68px;
+  height: clamp(2.125rem, 0.1149rem + 4.5946vw, 4.25rem);
   border: none;
   border-radius: 5px;
 }
 
 form textarea {
-  max-width: 100%;
   min-width: 100%;
-  min-height: 150px;
-  max-height: 250px;
+  max-width: 100%;
+  min-height: clamp(4.6875rem, 0.2534rem + 10.1351vw, 9.375rem);
+  max-height: clamp(7.8125rem, 0.4223rem + 16.8919vw, 15.625rem);
 }
