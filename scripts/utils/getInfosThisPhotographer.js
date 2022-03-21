@@ -1,11 +1,14 @@
 // Permet d'obtenir les informations du photographe actuel
-export const getInfosThisPhotographer = (dataPhotographers, currentId, thisPhotographer) => {
+// Paramètres = tableau, nouveau tableau, id correspond au photographe que ce soit dans la partie "media" ou "photographer"
+export const getInfosThisPhotographer = (array, newArray, photographerOrMediaId) => {
+  // Récupère l'id du photographe dans l'url
+  let currentId = document.location.href.split("?id=")[1];
   // Pour chaque photographe dans "dataPhotographers"
-  dataPhotographers.forEach((photographer) => {
+  array.forEach((element) => {
     // Si le numéro dans l'url correspond à l'id du photographe
-    if (currentId == photographer.id) {
+    if (currentId == element[photographerOrMediaId]) {
       // On injecte ses datas dans le tableau de la variable "thisPhotographer"
-      thisPhotographer.push(photographer);      
+      newArray.push(element);
     }
   });
 };

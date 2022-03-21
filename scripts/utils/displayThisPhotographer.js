@@ -26,9 +26,8 @@ export const displayThisPhotographer = (thisPhotographer) => {
           `
     )
     .join("");
-  // Permet d'injecter le tarif de chaque photographe sur sa page
-  price.innerHTML = thisPhotographer.map((photographer) => `${photographer.price}€/jour`);
   // Permet d'afficher le nom de chaque photographe sur sa modal de contact
   modalPhotographerName.innerHTML = thisPhotographer.map((photographer) => `${photographer.name}`);
-
+  // Permet d'injecter le tarif de chaque photographe sur sa page
+  price.innerHTML = thisPhotographer.map((photographer) => `${photographer.price}€/jour`);
 };

@@ -94,6 +94,81 @@ main {
   cursor: pointer;
 }
 
+/*************** Tri */
+.photographer_sort {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* #type {
+  cursor: pointer;
+  font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem);
+  font-weight: normal;
+  color: white;
+  padding: 11px;
+  width: clamp(5.3125rem, 2.1115rem + 9.4595vw, 10.625rem);
+  height: 22px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+.menuUnvisible {
+  display: none;
+}
+
+.menuVisible {
+  display: block;
+}
+
+.sort_dropdown {
+  position: relative;
+  /* border-radius: 5px; */
+}
+
+.pos1,
+.pos2,
+.pos3 {
+  cursor: pointer;
+  font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem);
+  font-weight: normal;
+  color: white;
+  padding: 11px;
+  width: clamp(5.3125rem, 2.1115rem + 9.4595vw, 10.625rem);
+  height: 40px;
+  border: none;
+  background-color: #901c1c;  
+}
+
+.pos1 {  
+  border-radius: 5px;
+}
+
+.pos2 {
+  position: absolute;
+  top: 36px;
+}
+
+.pos3 {
+  position: absolute;
+  border-radius: 0 0 5px 5px;
+  top: 72px;
+}
+
+/* .pos1:hover {   
+  border-radius: 5px 5px 0 0;
+} */
+
+.pos2:hover {
+  z-index: 2;  
+}
+
+.pos3:hover {  
+  border-radius: 0 0 5px 5px;
+}
+
 /*************** Picture */
 .photographer_picture {
   display: flex;
@@ -117,7 +192,7 @@ main {
 }
 
 .photographer_sort .tri_text,
-.photographer_sort .tri_dropdown_open {
+.photographer_sort .sort_dropdown {
   font-size: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem);
   font-style: normal;
   font-weight: 700;
@@ -201,6 +276,10 @@ main {
   font-weight: 500;
   line-height: 31px;
 }
+
+.btn_heart {
+  cursor: pointer;
+}
 /******************************************************* MODAL */
 #contact_modal {
   display: none;
@@ -227,10 +306,10 @@ main {
 
 .modal header {
   width: 90%;
-  height: 50px;  
+  height: 50px;
   font-size: clamp(2rem, 0.1081rem + 4.3243vw, 4rem);
   font-style: normal;
-  font-weight: 400;  
+  font-weight: 400;
 }
 
 .modal header img {
