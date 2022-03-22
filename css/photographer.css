@@ -156,15 +156,14 @@ main {
   position: relative;
   cursor: pointer;
   font-size: 18px;
-  font-weight: normal;
+  font-weight: 700;
   color: white;
   padding: 12px;
   width: 170px;
   height: 40px;
   border: none;
   border-radius: 5px;
-  background-color: #901c1c;
-  transition: 0.8s;
+  background-color: #901c1c;  
 }
 
 .sort_dropdown:hover {
@@ -175,21 +174,8 @@ main {
   color: white;
   padding: 4px 12px;
   width: 170px;
-  height: 178px;
-  border: none;
-  transition: 0.8s;
-}
-
-.sort_dropdown div {
-  opacity: 0;
-}
-
-.sort_dropdown:hover div {
-  z-index: 2;
-  opacity: 1;
-  border-top: 1px solid #fff;
-  width: 100%;
-  transition: 1.5s;
+  height: 170px;
+  border: none;  
 }
 
 .pos1,
@@ -198,13 +184,33 @@ main {
   text-align: left;
   cursor: pointer;
   font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem);
-  font-weight: normal;
+  font-weight: 700;
   color: white;
   width: 100%;
   height: 60px;
   border: none;
   background-color: #901c1c;
-  transition: 1.5s;
+}
+
+.pos2 {
+  position: relative;
+}
+
+.pos2::after,
+.pos2::before {
+  position: absolute;
+  content: "";
+  border-top: 1px solid #fff;
+  width: 100%;
+  left: 0;
+}
+
+.pos2::after {
+  top: 0;
+}
+
+.pos2::before {
+  bottom: 0;
 }
 
 .fa-chevron-down {
