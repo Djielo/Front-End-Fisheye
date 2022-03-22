@@ -6,6 +6,8 @@ import { displayMediasThisPhotographer } from "../utils/displayMediasThisPhotogr
 import { likesCounter } from "../utils/likesCounter.js";
 import { displaySort } from "../utils/displaySort.js";
 import { sortDropdown } from "../utils/sortDropdown.js";
+import { Lightbox } from "../../js/lightbox.js";
+
 
 // Crée un tableau vide pour stocker ensuite les datas de TOUS les photographes
 const dataPhotographers = [];
@@ -32,7 +34,8 @@ const displayGlobal = async () => {
   displayMediasThisPhotographer(thisMedia, thisPhotographer);
   likesCounter();
   sortDropdown();
-  displaySort(thisMedia, thisPhotographer);
+  displaySort(thisMedia, thisPhotographer);  
+  Lightbox.init();
 };
 
 displayGlobal();
