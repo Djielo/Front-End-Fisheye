@@ -36,7 +36,7 @@ const displayGlobal = async () => {
   likesCounter();
   sortDropdown();
   displaySort(thisMedia, thisPhotographer);
-  await Lightbox.init();
+  Lightbox.init();
   // Media;
   mediaFactory(thisMedia, thisPhotographer);
 };

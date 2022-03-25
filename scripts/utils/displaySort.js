@@ -1,3 +1,4 @@
+import { Lightbox } from "../../js/lightbox.js";
 import { displayMediasThisPhotographer } from "../utils/displayMediasThisPhotographer.js";
 
 export const displaySort = (array, thisPhotographer) => {
@@ -67,6 +68,8 @@ export const displaySort = (array, thisPhotographer) => {
       //
       //
       displayMediasThisPhotographer(array, thisPhotographer);
+      // Réassignation de la lightbox au media après tri
+      Lightbox.init();
     });
   });
 };
