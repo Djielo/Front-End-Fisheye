@@ -10,18 +10,17 @@ export class Lightbox {
   // Permet d'initialiser la lightbox
   static init() {
     // On récupère tous les liens des images afin d'afficher celle sur laquelle on clique
-    const links = Array.from(document.querySelectorAll('img[src$=".jpg"], video[src$=".mp4"]'));
-    const gallery = links.map((link) => link.getAttribute("src"));
+    const links = Array.from(document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]'));
+    const gallery = links.map((link) => link.getAttribute("href"));
     links.forEach((link) =>
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        // On affiche l'image dont le lien s'affiche dans l'URL
-        new Lightbox(e.currentTarget.getAttribute("src"), gallery);
-        console.log(document);
-      })
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      // On affiche l'image dont le lien s'affiche dans l'URL
+      new Lightbox(e.currentTarget.getAttribute("href"), gallery);      
+    })
     );
   }
-
+  
   /**
    * @param {string} url URL de l'image
    * @param {string[]} images Chemin des images de la lightbox
@@ -130,6 +129,6 @@ export class Lightbox {
   }
 }
 
-// Lightbox.init();
-
-/* <img src="${url}" alt=""></img> */
+// Si le tag = img, alors afficher l'image
+// si tag = video, alors affihcer la vidéo
+//// Injecter la balise contenant le tag video dans le html et remove la balise contenant le tag img

@@ -1,4 +1,4 @@
-import { displayMediasThisPhotographer } from "./displayMediasThisPhotographer.js";
+import { displayMediasThisPhotographer } from "../utils/displayMediasThisPhotographer.js";
 
 export const displaySort = (array, thisPhotographer) => {
   let menu = document.querySelectorAll(".menu");

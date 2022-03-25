@@ -1,13 +1,14 @@
 // import de toutes les fonctions necessaires au fonctionnement de ce constructeur
 import { getDatas } from "../../data/getDatas.js";
-import { getInfosThisPhotographer } from "../utils/getInfosThisPhotographer.js";
-import { displayThisPhotographer } from "../utils/displayThisPhotographer.js";
-import { displayMediasThisPhotographer } from "../utils/displayMediasThisPhotographer.js";
-import { likesCounter } from "../utils/likesCounter.js";
-import { displaySort } from "../utils/displaySort.js";
-import { sortDropdown } from "../utils/sortDropdown.js";
 import { Lightbox } from "../../js/lightbox.js";
-
+import { mediaFactory } from "../factories/mediaFactory.js";
+// import { Media } from "../factories/mediaFactory.js";
+import { displayMediasThisPhotographer } from "../utils/displayMediasThisPhotographer.js";
+import { displaySort } from "../utils/displaySort.js";
+import { displayThisPhotographer } from "../utils/displayThisPhotographer.js";
+import { getInfosThisPhotographer } from "../utils/getInfosThisPhotographer.js";
+import { likesCounter } from "../utils/likesCounter.js";
+import { sortDropdown } from "../utils/sortDropdown.js";
 
 // Crée un tableau vide pour stocker ensuite les datas de TOUS les photographes
 const dataPhotographers = [];
@@ -34,8 +35,10 @@ const displayGlobal = async () => {
   displayMediasThisPhotographer(thisMedia, thisPhotographer);
   likesCounter();
   sortDropdown();
-  displaySort(thisMedia, thisPhotographer);  
+  displaySort(thisMedia, thisPhotographer);
   Lightbox.init();
+  // Media;
+  mediaFactory(thisMedia, thisPhotographer);
 };
 
 displayGlobal();
