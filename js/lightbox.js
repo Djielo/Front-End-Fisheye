@@ -1,4 +1,4 @@
-import { enableBodyScroll, disableBodyScroll } from "../../js/bodyScrollLock.js";
+import { enableBodyScroll, disableBodyScroll } from "./bodyScrollLock.js";
 
 /**
  * @property {HTMLElement} element
@@ -13,14 +13,14 @@ export class Lightbox {
     const links = Array.from(document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]'));
     const gallery = links.map((link) => link.getAttribute("href"));
     links.forEach((link) =>
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      // On affiche l'image dont le lien s'affiche dans l'URL
-      new Lightbox(e.currentTarget.getAttribute("href"), gallery);      
-    })
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        // On affiche l'image dont le lien s'affiche dans l'URL
+        new Lightbox(e.currentTarget.getAttribute("href"), gallery);
+      })
     );
   }
-  
+
   /**
    * @param {string} url URL de l'image
    * @param {string[]} images Chemin des images de la lightbox
