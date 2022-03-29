@@ -1,8 +1,8 @@
 // import de toutes les fonctions necessaires au fonctionnement de ce constructeur
 import { getDatas } from "../../data/getDatas.js";
 import { Lightbox } from "../../js/lightbox.js";
-import { mediaFactory } from "../factories/mediaFactory.js";
-// import { Media } from "../factories/mediaFactory.js";
+// import { mediaFactory } from "../factories/mediaFactory.js";
+import { Media } from "../factories/mediaFactory.js";
 import { displayMediasThisPhotographer } from "../utils/displayMediasThisPhotographer.js";
 import { displaySort } from "../utils/displaySort.js";
 import { displayThisPhotographer } from "../utils/displayThisPhotographer.js";
@@ -30,15 +30,15 @@ const displayGlobal = async () => {
   // Récupère les infos médias du photographe lié au currentId...
   getInfosThisPhotographer(dataMedia, thisMedia, "photographerId");
   // ... et les affiche
-  displayThisPhotographer(thisPhotographer);
+  displayThisPhotographer(thisPhotographer);  
   // ... et les affiche
   displayMediasThisPhotographer(thisMedia, thisPhotographer);
   likesCounter();
   sortDropdown();
   displaySort(thisMedia, thisPhotographer);
   Lightbox.init();
-  // Media;
-  mediaFactory(thisMedia, thisPhotographer);
+  Media;
+  // mediaFactory(thisMedia, thisPhotographer);
 };
 
 displayGlobal();
