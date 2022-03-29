@@ -40,18 +40,29 @@ export class Lightbox {
    */
   loadImage(url) {
     this.url = null;
-    const image = new Image();
     const container = this.element.querySelector(".lightbox__container");
     const loader = document.createElement("div");
     loader.classList.add("lightbox__loader");
     container.innerHTML = "";
     container.appendChild(loader);
-    image.onload = () => {
+
+    if (url.includes("jpg")) {
+      const image = new Image();
+      image.onload = () => {
+        container.removeChild(loader);
+        container.appendChild(image);
+        this.url = url;
+      };
+      image.src = url;
+    } else if (url.includes("mp4")) {
+      let video = document.createElement("video");
+      video.src = url;
+      video.setAttribute("autoplay", "");
+      video.setAttribute("loop", "");      
       container.removeChild(loader);
-      container.appendChild(image);
+      container.appendChild(video);
       this.url = url;
-    };
-    image.src = url;
+    }
   }
 
   /**

@@ -1,7 +1,7 @@
 import { Lightbox } from "../../js/lightbox.js";
-import { displayMediasThisPhotographer } from "../utils/displayMediasThisPhotographer.js";
+import { displayMedia } from "../factories/mediaFactory.js";
 
-export const displaySort = (array, thisPhotographer) => {
+export const displaySort = (thisMedia, thisPhotographer) => {
   let menu = document.querySelectorAll(".menu");
   const position1 = document.querySelector(".pos1");
   const position2 = document.querySelector(".pos2");
@@ -14,7 +14,7 @@ export const displaySort = (array, thisPhotographer) => {
       //
       ////////// DATE
       if (element.innerText == "Date") {
-        array.sort((a, b) => {
+        thisMedia.sort((a, b) => {
           return a.date > b.date ? -1 : 1;
         });
         console.log(element.innerText);
@@ -33,7 +33,7 @@ export const displaySort = (array, thisPhotographer) => {
       //
       ////////// POPULARITE
       else if (element.innerText == "Popularité") {
-        array.sort((a, b) => {
+        thisMedia.sort((a, b) => {
           return a.likes > b.likes ? -1 : 1;
         });
         console.log(element.innerText);
@@ -51,7 +51,7 @@ export const displaySort = (array, thisPhotographer) => {
       //
       ////////// TITRE
       else if (element.innerText == "Titre") {
-        array.sort((a, b) => {
+        thisMedia.sort((a, b) => {
           return a.title < b.title ? -1 : 1;
         });
         console.log(element.innerText);
@@ -67,7 +67,9 @@ export const displaySort = (array, thisPhotographer) => {
       }
       //
       //
-      displayMediasThisPhotographer(array, thisPhotographer);
+      let x = Array.from(document.querySelector(".photographer_images").children);
+      x.forEach((y) => y.remove());
+      displayMedia(thisMedia, thisPhotographer);
       // Réassignation de la lightbox au media après tri
       Lightbox.init();
     });
