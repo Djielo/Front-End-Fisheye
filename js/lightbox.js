@@ -139,7 +139,3 @@ export class Lightbox {
     return dom;
   }
 }
-
-// Si le tag = img, alors afficher l'image
-// si tag = video, alors affihcer la vidéo
-//// Injecter la balise contenant le tag video dans le html et remove la balise contenant le tag img

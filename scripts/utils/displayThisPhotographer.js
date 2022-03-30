@@ -21,7 +21,7 @@ export const displayThisPhotographer = (thisPhotographer) => {
             <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
           </div>
           <div class="photographer_picture">
-          <img src=${picture}${photographer.portrait}>
+          <img src=${picture}${photographer.portrait} alt="Portrait photo du photographe">
           </div>
           `
     )
