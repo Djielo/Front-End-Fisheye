@@ -87,7 +87,7 @@ main {
 }
 
 .contact_button {
-  font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem);
+  font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem) /*18px*/;
   font-weight: bold;
   color: white;
   padding: 11px;
@@ -118,13 +118,13 @@ main {
 .photographer_sort {
   display: flex;
   width: 90%;
-  height: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem);
+  height: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem) /*18px*/;
   margin: 0 30px 0 -10px;
 }
 
 .photographer_sort .tri_text,
 .photographer_sort .sort_dropdown {
-  font-size: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem);
+  font-size: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem) /*18px*/;
   font-style: normal;
   font-weight: 700;
   text-align: left;
@@ -196,10 +196,7 @@ main {
   background-color: #901c1c;
 }
 
-.pos1 {
-  height: clamp(1.5625rem, 0.0845rem + 3.3784vw, 3.125rem); /*50px*/
-}
-
+.pos1,
 .pos3 {
   height: clamp(1.75rem, 0.0946rem + 3.7838vw, 3.5rem); /*56px*/
 }

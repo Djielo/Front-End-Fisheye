@@ -6,7 +6,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
   const position1 = document.querySelector(".pos1");
   const position2 = document.querySelector(".pos2");
   const position3 = document.querySelector(".pos3");
-  let tempo = [];
+  let storageTempo = [];
 
   menu.forEach((element) => {
     element.addEventListener("click", () => {
@@ -19,13 +19,13 @@ export const displaySort = (thisMedia, thisPhotographer) => {
         });
         console.log(element.innerText);
         if (element.innerText == "Date" && element.classList.contains("pos2")) {
-          tempo = position1.innerText;
+          storageTempo = position1.innerText;
           position1.innerText = position2.innerText;
-          position2.innerText = tempo;
+          position2.innerText = storageTempo;
         } else if (element.innerText == "Date" && element.classList.contains("pos3")) {
-          tempo = position1.innerText;
+          storageTempo = position1.innerText;
           position1.innerText = position3.innerText;
-          position3.innerText = tempo;
+          position3.innerText = storageTempo;
         }
       }
 
@@ -38,13 +38,13 @@ export const displaySort = (thisMedia, thisPhotographer) => {
         });
         console.log(element.innerText);
         if (element.innerText == "Popularité" && element.classList.contains("pos2")) {
-          tempo = position1.innerText;
+          storageTempo = position1.innerText;
           position1.innerText = position2.innerText;
-          position2.innerText = tempo;
+          position2.innerText = storageTempo;
         } else if (element.innerText == "Popularité" && element.classList.contains("pos3")) {
-          tempo = position1.innerText;
+          storageTempo = position1.innerText;
           position1.innerText = position3.innerText;
-          position3.innerText = tempo;
+          position3.innerText = storageTempo;
         }
       }
       //
@@ -56,13 +56,13 @@ export const displaySort = (thisMedia, thisPhotographer) => {
         });
         console.log(element.innerText);
         if (element.innerText == "Titre" && element.classList.contains("pos2")) {
-          tempo = position1.innerText;
+          storageTempo = position1.innerText;
           position1.innerText = position2.innerText;
-          position2.innerText = tempo;
+          position2.innerText = storageTempo;
         } else if (element.innerText == "Titre" && element.classList.contains("pos3")) {
-          tempo = position1.innerText;
+          storageTempo = position1.innerText;
           position1.innerText = position3.innerText;
-          position3.innerText = tempo;
+          position3.innerText = storageTempo;
         }
       }
       //
