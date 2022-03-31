@@ -21,7 +21,7 @@ const displayPhotographers = async () => {
       (photographer) =>
         `
         <article>          
-            <a href=${link}${photographer.id}><img src=${picture}${photographer.portrait} alt="Portrait photo du photographe></a>                      
+            <a href=${link}${photographer.id}><img src=${picture}${photographer.portrait} alt="Portrait photo du photographe"></a>                      
             <h2>${photographer.name}</h2>
             <h3>${photographer.city}, ${photographer.country}</h3>
             <p>${photographer.tagline}</p>

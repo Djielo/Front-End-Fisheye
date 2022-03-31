@@ -29,11 +29,11 @@ const displayGlobal = async () => {
   getInfosThisPhotographer(dataMedia, thisMedia, "photographerId");
   // ... et les affiche
   displayThisPhotographer(thisPhotographer);
+  displaySort(thisMedia, thisPhotographer);
   displayMedia(thisMedia, thisPhotographer);
   // ... et les affiche
   likesCounter();
   sortDropdown();
-  displaySort(thisMedia, thisPhotographer);
   Lightbox.init();
 };
 

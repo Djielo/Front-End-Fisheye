@@ -8,14 +8,24 @@ export const displaySort = (thisMedia, thisPhotographer) => {
   const position3 = document.querySelector(".pos3");
   let storageTempo = [];
 
+  // Tri par défaut
+  const sortDefault = () => {
+    if (position1.innerText == "Date") {      
+      thisMedia.sort((a, b) => {
+        return a.date < b.date ? -1 : 1;
+      });
+    }
+  };
+  sortDefault();
+
   menu.forEach((element) => {
     element.addEventListener("click", () => {
       //
       //
       ////////// DATE
-      if (element.innerText == "Date") {
+      if (element.innerText == "Date") {        
         thisMedia.sort((a, b) => {
-          return a.date > b.date ? -1 : 1;
+          return a.date < b.date ? -1 : 1;
         });
         console.log(element.innerText);
         if (element.innerText == "Date" && element.classList.contains("pos2")) {
@@ -34,7 +44,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
       ////////// POPULARITE
       else if (element.innerText == "Popularité") {
         thisMedia.sort((a, b) => {
-          return a.likes > b.likes ? -1 : 1;
+          return a.likes < b.likes ? -1 : 1;
         });
         console.log(element.innerText);
         if (element.innerText == "Popularité" && element.classList.contains("pos2")) {
@@ -52,7 +62,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
       ////////// TITRE
       else if (element.innerText == "Titre") {
         thisMedia.sort((a, b) => {
-          return a.title < b.title ? -1 : 1;
+          return a.title > b.title ? -1 : 1;
         });
         console.log(element.innerText);
         if (element.innerText == "Titre" && element.classList.contains("pos2")) {
@@ -66,9 +76,11 @@ export const displaySort = (thisMedia, thisPhotographer) => {
         }
       }
       //
-      //
-      let x = Array.from(document.querySelector(".photographer_images").children);
-      x.forEach((y) => y.remove());
+      // Crée un tableau à partir de l'HTMLCollection et y inclut les articles contenus (children)
+      let arrayArticles = Array.from(document.querySelector(".photographer_images").children);
+      // Efface chaque article du tableau
+      arrayArticles.forEach((article) => article.remove());
+      // Rappelle la nouvelle composition selon le nouveau tri
       displayMedia(thisMedia, thisPhotographer);
       // Réassignation de la lightbox au media après tri
       Lightbox.init();
