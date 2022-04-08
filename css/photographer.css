@@ -159,12 +159,10 @@ main {
   height: clamp(0.9375rem, 0.0507rem + 2.027vw, 1.875rem); /*30px*/
   border: none;
   border-radius: 10px;
-  background-color: #901c1c;
-  /* transition: 0.5s; */
+  background-color: #901c1c;  
 }
 
-.sort_dropdown:focus,
-.sort_dropdown:hover {
+.sort_dropdown:focus {
   position: relative;
   cursor: pointer;
   font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem); /*18px*/
@@ -183,9 +181,7 @@ main {
 }
 
 .sort_dropdown:focus > .pos2,
-.sort_dropdown:focus > .pos3,
-.sort_dropdown:hover > .pos2,
-.sort_dropdown:hover > .pos3 {
+.sort_dropdown:focus > .pos3 {
   display: block;
 }
 

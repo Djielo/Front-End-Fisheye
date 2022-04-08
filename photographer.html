@@ -6,23 +6,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="icon" type="image/ico" href="assets/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
-    <title>Fisheye - photographe</title>
+    <title>Fisheye - Photographe</title>
   </head>
   <body>
     <header>
       <a tabindex="0" href="index.html">
-        <img src="assets/images/logo.png" alt="logo du site" class="logo" />
+        <img src="assets/images/logo.png" alt="logo du site Fisheye" class="logo" />
       </a>
     </header>
     <main id="main">
       <div tabindex="0" class="photographer_header"></div>
-      <div tabindex="0" class="photographer_sort">
-        <div tabindex="0" class="tri_text">Trier par</div>
-        <div tabindex="0" role="tree" class="sort_dropdown">
-          <button tabindex="-1" role="treeitem" class="pos1 menu">Date</button>
-          <i class="fas fa-chevron-down"></i>          
-          <button tabindex="0" role="treeitem" class="pos2 menu">Popularité</button>
-          <button role="treeitem" class="pos3 menu">Titre</button>
+      <div class="photographer_sort">
+        <label tabindex="0" for="sortBy" class="tri_text">Trier par</label>
+        <div tabindex="0" role="tree" id="sortBy" class="sort_dropdown">
+          <button tabindex="1" role="treeitem" class="pos1 menu">Date</button>
+          <i class="fas fa-chevron-down"></i>
+          <button tabindex="1" role="treeitem" class="pos2 menu">Popularité</button>
+          <button tabindex="1" role="treeitem" class="pos3 menu">Titre</button>
         </div>
       </div>
       <section tabindex="0" class="photographer_images"></section>
