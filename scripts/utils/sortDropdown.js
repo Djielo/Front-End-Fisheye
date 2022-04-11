@@ -19,22 +19,27 @@
 //
 //
 //
-export const sortDropdown = () => {
-  const clickDropdown = document.querySelector(".pos1");
-  let chevron = document.querySelector(".fa-chevron-down");
-  clickDropdown.addEventListener("focus", () => {
-    // pour chaque élément du tableau "menu", vérifier s'il existe une classe "menu
-    if (chevron.classList.contains("fa-chevron-down")) {
-      chevron.classList.replace("fa-chevron-down", "fa-chevron-up");
-    }
-  });
-  clickDropdown.addEventListener("focusout", () => {
-    // pour chaque élément du tableau "menu", vérifier s'il existe une classe "menu    
-    if (chevron.classList.contains("fa-chevron-up")) {    
-      chevron.classList.replace("fa-chevron-up", "fa-chevron-down");
-    }
+
+const dropdownMenu = document.querySelector(".sort_dropdown");
+const myarticle = document.querySelector(".photographer_images");
+const sortText = document.querySelector(".sort_text");
+const buttons = document.querySelector(".sort_btn");
+let chevron = document.querySelector(".fa-chevron-down");
+
+dropdownMenu.addEventListener("focus", () => {
+  buttons.style.display = "block";
+  chevron.classList.replace("fa-chevron-down", "fa-chevron-up");
+});
+
+const dropdownClose = (element) => {
+  element.addEventListener("focus", () => {
+    buttons.style.display = "none";
+    chevron.classList.replace("fa-chevron-up", "fa-chevron-down");
   });
 };
+
+dropdownClose(myarticle);
+dropdownClose(sortText);
 
 // export const sortDropdownAcc = () => {
 //   sortDropdown.style.height = "clamp(5rem, 0.8615rem + 9.4595vw, 9.375rem); /*150px*/";

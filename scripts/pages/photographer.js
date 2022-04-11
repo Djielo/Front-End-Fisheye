@@ -5,7 +5,7 @@ import { displaySort } from "../utils/displaySort.js";
 import { displayThisPhotographer } from "../utils/displayThisPhotographer.js";
 import { getInfosThisPhotographer } from "../utils/getInfosThisPhotographer.js";
 import { likesCounter } from "../utils/likesCounter.js";
-import { sortDropdown } from "../utils/sortDropdown.js";
+// import { sortDropdown } from "../utils/sortDropdown.js";
 import { displayMedia } from "../factories/mediaFactory.js";
 // import { sortDropdownAcc } from "../utils/sortDropdown.js";
 
@@ -34,7 +34,7 @@ const displayGlobal = async () => {
   displayMedia(thisMedia, thisPhotographer);
   // ... et les affiche
   likesCounter();
-  sortDropdown();
+  // sortDropdown();
   // sortDropdownAcc()
   Lightbox.init();
 };

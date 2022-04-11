@@ -144,6 +144,7 @@ main {
   height: clamp(1.5625rem, -0.3906rem + 6.25vw, 3.125rem); /*50px*/
 }
 
+/* 170, 30 */
 .sort_dropdown {
   display: flex;
   flex-direction: column;
@@ -155,27 +156,27 @@ main {
   font-weight: 700;
   color: white;
   padding: 12px;
-  width: clamp(6.25rem, 2.1115rem + 9.4595vw, 10.625rem); /*170px*/
-  height: clamp(0.9375rem, 0.0507rem + 2.027vw, 1.875rem); /*30px*/
+  width: clamp(6.25rem, 2.1115rem + 9.4595vw, 10.625rem);
+  height: clamp(0.9375rem, 0.0507rem + 2.027vw, 1.875rem);
   border: none;
   border-radius: 10px;
-  background-color: #901c1c;  
+  background-color: #901c1c;
 }
 
-.sort_dropdown:focus {
+/* 18, 170, 150 */
+.sort_btn {
   position: relative;
   cursor: pointer;
-  font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem); /*18px*/
-  font-weight: 700;
+  font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem);
   color: white;
   padding: 4px 12px;
-  width: clamp(6.25rem, 2.1115rem + 9.4595vw, 10.625rem); /*170px*/
-  height: clamp(5rem, 0.8615rem + 9.4595vw, 9.375rem); /*150px*/
+  width: clamp(6.25rem, 2.1115rem + 9.4595vw, 10.625rem);
+  height: clamp(5rem, 0.8615rem + 9.4595vw, 9.375rem);
   border: none;
   z-index: 2;
 }
 
-.sort_dropdown > .pos2,
+/* .sort_dropdown > .pos2,
 .sort_dropdown > .pos3 {
   display: none;
 }
@@ -183,6 +184,16 @@ main {
 .sort_dropdown:focus > .pos2,
 .sort_dropdown:focus > .pos3 {
   display: block;
+} */
+
+/* .sort_btn {
+  display: none;
+  width: 194px;
+  position: relative;
+} */
+
+.pos1 {
+  margin: 0 0 10px 5px;
 }
 
 .pos1,
@@ -196,6 +207,11 @@ main {
   width: 100%;
   border: none;
   background-color: #901c1c;
+}
+
+.pos2:focus,
+.pos3:focus {
+  background-color: #af4040;
 }
 
 .pos1,
