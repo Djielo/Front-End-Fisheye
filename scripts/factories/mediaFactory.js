@@ -16,13 +16,13 @@ class Media {
     this._mediaContent.insertAdjacentHTML(
       "afterbegin",
       `
-      <article>
+      <article tabindex="0">
         ${media}  
-        <div>
+        <div tabindex="0">
           <p>${this._media.title}</p>
           <div>
             <div class="localCounter">${this._media.likes}</div>
-            <i class="fas fa-heart btn_heart unliked"></i>
+            <button tabindex="0" class="unliked btn_heart"><i class="fas fa-heart"></i></button>
           </div>
         </div>
       </article>

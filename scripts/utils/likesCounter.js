@@ -1,6 +1,6 @@
 export const likesCounter = () => {
   // Récupère tous les éléments html contenant la classe ".btn_heart" (coeurs de chaque média), puis les stocke dans le tableau "buttons"
-  const buttons = document.querySelectorAll(".btn_heart");
+  const buttons = document.querySelectorAll(".unliked");
   // Récupère tous les éléments html contenant la classe ".localCounter" (like de chaque média), puis les stocke dans le tableau "allCounters"
   const allCounters = document.querySelectorAll(".localCounter");
   // Récupère l'élément html contenant la classe ".cta_heart" (like global), puis les stocke dans le tableau "globalCounter"

@@ -1,16 +1,24 @@
 import { Lightbox } from "../../js/lightbox.js";
 import { displayMedia } from "../factories/mediaFactory.js";
+import { likesCounter } from "./likesCounter.js";
 
 export const displaySort = (thisMedia, thisPhotographer) => {
   let menu = document.querySelectorAll(".menu");
+  const span = document.querySelector(".span");
   const position1 = document.querySelector(".pos1");
   const position2 = document.querySelector(".pos2");
   const position3 = document.querySelector(".pos3");
   let storageTempo = [];
 
+  menu.forEach((element) => {
+    element.addEventListener("click", () => {
+      span.innerText = element.innerText;
+    });
+  });
+
   // Tri par défaut
   const sortDefault = () => {
-    if (position1.innerText == "Date") {      
+    if (position1.innerText == "Date") {
       thisMedia.sort((a, b) => {
         return a.date < b.date ? -1 : 1;
       });
@@ -23,7 +31,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
       //
       //
       ////////// DATE
-      if (element.innerText == "Date") {        
+      if (element.innerText == "Date") {
         thisMedia.sort((a, b) => {
           return a.date < b.date ? -1 : 1;
         });
@@ -84,6 +92,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
       displayMedia(thisMedia, thisPhotographer);
       // Réassignation de la lightbox au media après tri
       Lightbox.init();
+      likesCounter();
     });
   });
 };
