@@ -16,44 +16,33 @@
     </header>
     <main id="main">
       <div tabindex="0" class="photographer_header"></div>
-      <!-- <div class="photographer_sort">
-        <label tabindex="0" for="sortBy" class="sort_text">Trier par</label>
-        <div class="sort_dropdown" tabindex="0" role="tree" id="sortBy">
-          <span class="pos1">Date</span>
-          <i class="fas fa-chevron-down"></i>
-          <div class="sort_btn">
-            <button tabindex="0" role="treeitem" class="pos2 menu">Popularité</button>
-            <button tabindex="0" role="treeitem" class="pos3 menu">Titre</button>
-          </div>
-        </div>
-      </div> -->
       <div class="photographer_sort">
-        <label tabindex="0" for="sortBy" class="sort_text">Trier par</label>
+        <label tabindex="0" class="sort_text">Trier par</label>
         <div class="dropdownContainer">
           <div id="span">
             <span tabindex="0" class="span">Date</span>
-            <i class="fas fa-chevron-down"></i>
+            <i# class="fas fa-chevron-down"></i>
           </div>
-          <div class="sort_dropdown" role="tree" id="sortBy">
-            <button tabindex="0" role="treeitem" class="pos1 menu">Date</button>            
-            <button tabindex="0" role="treeitem" class="pos2 menu">Popularité</button>
-            <button tabindex="0" role="treeitem" class="pos3 menu">Titre</button>
+          <div class="sort_dropdown">
+            <button tabindex="0" class="pos1 menu">Date</button>
+            <button tabindex="0" class="pos2 menu">Popularité</button>
+            <button tabindex="0" class="pos3 menu">Titre</button>
           </div>
-        </div>           
+        </div>
       </div>
 
-      <section tabindex="0" class="photographer_images"></section>
+      <div tabindex="0" class="photographer_images"></div>
     </main>
     <div class="cta_all">
       <div class="cta_heart"></div>
       <div class="cta_days"></div>
     </div>
-    <div id="contact_modal">
-      <div class="modal">
+    <aside id="modal1" class="contact_modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none">
+      <div class="modal1 js_modal_stoprop">
         <header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" alt="bouton de fermeture de la modale de contact" onclick="closeModal()" />
-          <h2 class="modal_photographer_name"></h2>
+          <h2 id="titlemodal">Contactez-moi</h2>
+          <img src="assets/icons/close.svg" alt="bouton de fermeture de la modale de contact" class="js_modal_close"/>
+          <h2 class="modal_photographer_name">Name Photographer</h2>
         </header>
         <form>
           <div>
@@ -64,12 +53,12 @@
             <label for="email">Email</label>
             <input id="email" type="text" name="email" />
             <label for="message">Votre message</label>
-            <textarea id="message" type="text" name="message"></textarea>
+            <textarea id="message" name="message"></textarea>
           </div>
           <button class="contact_button">Envoyer</button>
         </form>
       </div>
-    </div>
+    </aside>
     <script src="scripts/pages/photographer.js" type="module"></script>
     <script src="scripts/utils/contactForm.js"></script>
   </body>

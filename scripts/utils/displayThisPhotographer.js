@@ -18,7 +18,7 @@ export const displayThisPhotographer = (thisPhotographer) => {
             <p>${photographer.tagline}</p>
           </article>
           <div class="photographer_contact">
-            <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+            <button class="contact_button js_modal">Contactez-moi</button>
           </div>
           <div class="photographer_picture">
           <img src=${picture}${photographer.portrait} alt="Portrait photo du photographe">

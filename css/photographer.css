@@ -50,7 +50,6 @@ main {
 .photographer_profile {
   display: flex;
   flex-direction: column;
-  align-items: left;
   justify-content: center;
   height: 100%;
   padding-left: 6vw;
@@ -134,7 +133,6 @@ main {
 
 /* 15px, 30px, -10px */
 .sort_text {
-  width: 10%;
   margin-top: clamp(0.5rem, 0.0861rem + 0.9459vw, 0.9375rem);
   margin-right: clamp(0.9375rem, 0.0507rem + 2.027vw, 1.875rem);
   margin-left: clamp(-0.375rem, -0.1385rem + -0.5405vw, -0.625rem);
@@ -143,7 +141,6 @@ main {
 /* 170px, 30px */
 .sort_dropdown {
   visibility: hidden;
-  margin: 0 0 10px 5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -154,8 +151,7 @@ main {
   font-weight: 700;
   color: white;
   padding: 8px 12px;
-  width: 170px;
-  height: clamp(4.375rem, -1.0938rem + 17.5vw, 8.75rem);
+  width: 160px;
   border-radius: 10px;
   border: none;
   background-color: #901c1c;
@@ -168,14 +164,13 @@ main {
 
 .span {
   display: block;
-  margin: 0 0 10px 5px;
   text-align: left;
   cursor: pointer;
   font-size: 18px;
   font-weight: 400;
   color: white;
   padding: 16px;
-  width: 162px;
+  width: 152px;
   height: 20px;
   border: none;
   border-radius: 10px;
@@ -287,7 +282,7 @@ main {
   line-height: 31px;
 }
 
- button.liked {
+button.liked {
   color: #d3573c;
 }
 
@@ -322,30 +317,33 @@ main {
   color: #901c1c;
 }
 /******************************************************* MODAL */
-#contact_modal {
-  display: none;
-}
 
-.modal {
+.modal1 {
+  z-index: 100;
   position: fixed;
-  top: 5%;
+  top: 10%;
   left: 10%;
-  /* bottom: 10%; */
+  bottom: 10%;
   right: 10%;
-  border-radius: 5px;
-  background-color: #db8876;
-  width: clamp(25rem, 15.5405rem + 21.6216vw, 35rem);
-  height: max-content;
-  /* min-height: 700px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 35px;
   margin: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #db8876;
+  width: clamp(25rem, 15.5405rem + 15.6216vw, 35rem);
+  height: max-content;
+  animation: fadeIn 0.4s both;
 }
 
-.modal header {
+.modal1[aria-hidden="true"] {
+  animation: fadeOut 0.4s both;
+}
+
+.contact_modal header {
   width: 90%;
   height: 50px;
   font-size: clamp(2rem, 0.1081rem + 4.3243vw, 4rem);
@@ -353,20 +351,20 @@ main {
   font-weight: 400;
 }
 
-.modal header img {
+.contact_modal header img {
   cursor: pointer;
-  width: clamp(1.25rem, -0.5236rem + 4.0541vw, 3.125rem);
+  width: clamp(1.25rem, -0.5236rem + 2.0541vw, 3.125rem);
   aspect-ratio: 1/1;
 }
 
-.modal header h2 {
+.contact_modal header h2 {
   font-size: clamp(2rem, 0.1081rem + 4.3243vw, 4rem);
   font-weight: normal;
   text-align: center;
   margin: 0;
 }
 
-.modal header .modal_photographer_name {
+.contact_modal header .modal_photographer_name {
   position: absolute;
   top: 55px;
 }
@@ -376,12 +374,12 @@ form {
   flex-direction: column;
   align-items: flex-start;
   width: 90%;
-  padding-top: clamp(6.25rem, 0.3378rem + 13.5135vw, 12.5rem);
+  padding-top: clamp(6.25rem, 0.3378rem + 12.5135vw, 10.5rem);
 }
 
 form label {
   color: #312e2e;
-  font-size: clamp(1.125rem, 0.0608rem + 2.4324vw, 2.25rem);
+  font-size: clamp(1.125rem, 0.0608rem + 2.4324vw, 1.75rem);
 }
 
 form div {
@@ -392,7 +390,14 @@ form div {
   margin-bottom: clamp(0.8125rem, 0.0439rem + 1.7568vw, 1.625rem);
 }
 
-form input {
+form input,
+form textarea {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(80, 80, 80);
+  padding-left: 10px;
+  margin-bottom: 15px;
   width: 100%;
   height: clamp(2.125rem, 0.1149rem + 4.5946vw, 4.25rem);
   border: none;
@@ -404,6 +409,24 @@ form textarea {
   max-width: 100%;
   min-height: clamp(4.6875rem, 0.2534rem + 10.1351vw, 9.375rem);
   max-height: clamp(7.8125rem, 0.4223rem + 16.8919vw, 15.625rem);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /******************************************************* LIGHTBOX */
