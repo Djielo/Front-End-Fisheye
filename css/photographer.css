@@ -3,11 +3,15 @@
   box-sizing: border-box;
 }
 
-body, button {
+body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
   display: flex;
   justify-content: center;
+}
+
+button {
+  font-family: "DM Sans", sans-serif;
 }
 
 /******************************************************* HEADER */
@@ -90,12 +94,15 @@ main {
 
 /*18px*/
 .contact_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1rem;
   font-weight: normal;
   color: white;
   padding: 11px;
   width: 10rem;
-  height: 4rem;
+  height: 3.5rem;
   border: none;
   background-color: #901c1c;
   border-radius: 5px;
