@@ -3,9 +3,11 @@
   box-sizing: border-box;
 }
 
-body {
+body, button {
   font-family: "DM Sans", sans-serif;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 /******************************************************* HEADER */
@@ -16,12 +18,12 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
-  width: 100%;
+  height: clamp(2.5rem, -0.8967rem + 7.2464vw, 5.625rem);
+  width: 100%;  
 }
 
 .logo {
-  height: clamp(1.875rem, 0.1014rem + 4.0541vw, 3.75rem);
+  height: 3rem;
   margin-left: 100px;
 }
 
@@ -32,8 +34,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: auto;
+  max-width: clamp(46.875rem, 0rem + 100vw, 105rem);
+  height: auto;  
   top: 140px;
 }
 
@@ -57,7 +59,7 @@ main {
 }
 
 .photographer_profile h2 {
-  font-size: clamp(1rem, -1.5946rem + 6.2162vw, 4rem);
+  font-size: 3rem;
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -65,7 +67,7 @@ main {
 }
 
 .photographer_profile h3 {
-  font-size: clamp(0.75rem, 0.0405rem + 1.6216vw, 1.5rem);
+  font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   margin: 5px 0;
@@ -73,7 +75,7 @@ main {
 }
 
 .photographer_profile p {
-  font-size: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem);
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   margin: 5px 0;
@@ -86,13 +88,14 @@ main {
   justify-content: center;
 }
 
+/*18px*/
 .contact_button {
-  font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem) /*18px*/;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: normal;
   color: white;
   padding: 11px;
-  width: clamp(5.3125rem, 2.1115rem + 9.4595vw, 10.625rem);
-  height: clamp(2.1875rem, 0.1182rem + 4.7297vw, 4.375rem);
+  width: 10rem;
+  height: 4rem;
   border: none;
   background-color: #901c1c;
   border-radius: 5px;
@@ -103,12 +106,12 @@ main {
 .photographer_picture {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
 }
 
 .photographer_picture img {
-  height: 15vw;
-  width: 15vw;
+  height: 12rem;
+  width: 12rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -119,14 +122,14 @@ main {
 .photographer_sort {
   display: flex;
   width: 90%;
-  height: 50px;
+  height: 5rem;
   margin: 50px 30px 50px -10px;
 }
 
 /* 18px */
 .photographer_sort .sort_text,
 .photographer_sort .sort_dropdown {
-  font-size: clamp(0.625rem, 0.152rem + 1.0811vw, 1.125rem);
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 700;
   text-align: left;
@@ -134,12 +137,12 @@ main {
 
 /* 15px, 30px, -10px */
 .sort_text {
-  margin-top: clamp(0.5rem, 0.0861rem + 0.9459vw, 0.9375rem);
-  margin-right: clamp(0.9375rem, 0.0507rem + 2.027vw, 1.875rem);
-  margin-left: clamp(-0.375rem, -0.1385rem + -0.5405vw, -0.625rem);
+  margin-top: 15px;
+  margin-right: 30px;
+  margin-left: -10px;
 }
 
-/* 170px, 30px */
+/* 160px, 30px */
 .sort_dropdown {
   visibility: hidden;
   display: flex;
@@ -148,11 +151,11 @@ main {
   justify-content: flex-start;
   position: relative;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 700;
   color: white;
-  padding: 8px 12px;
-  width: 160px;
+  padding: 6px 12px;
+  width: 10rem;
   border-radius: 10px;
   border: none;
   background-color: #901c1c;
@@ -163,15 +166,16 @@ main {
   color: white;
 }
 
+/* 18px, 152px, 16px */
 .span {
   display: block;
   text-align: left;
   cursor: pointer;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: normal;
   color: white;
   padding: 16px;
-  width: 152px;
+  width: 9.5rem;
   height: 20px;
   border: none;
   border-radius: 10px;
@@ -184,8 +188,8 @@ main {
 .pos3 {
   text-align: left;
   cursor: pointer;
-  font-size: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem);
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: normal;
   color: white;
   width: 100%;
   border: none;
@@ -201,13 +205,13 @@ main {
 /* 56px */
 .pos1,
 .pos3 {
-  height: clamp(1.75rem, 0.0946rem + 3.7838vw, 3.5rem);
+  height: 46px;
 }
 
 /* 56px */
 .pos2 {
   position: relative;
-  height: clamp(1.75rem, 0.0946rem + 3.7838vw, 3.5rem);
+  height: 46px;
 }
 
 .pos2::after,
@@ -233,8 +237,10 @@ main {
   z-index: 3;
   display: block;
   position: absolute;
-  top: clamp(0.625rem, 0.0929rem + 1.2162vw, 1.1875rem);
-  right: clamp(0.375rem, 0.1385rem + 0.5405vw, 0.625rem);
+  font-size: 1.2rem;
+  font-weight: normal;
+  top: 19px;
+  right: 10px;
 }
 
 /***************************** Images */
@@ -242,8 +248,8 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  row-gap: clamp(0.625rem, 0.0338rem + 1.3514vw, 1.25rem);
-  column-gap: clamp(3.75rem, 0.2027rem + 8.1081vw, 7.5rem);
+  row-gap: 1rem;
+  column-gap: 5rem;
   width: 90%;
   height: max-content;
 }
@@ -262,10 +268,10 @@ main {
 }
 
 .photographer_images article p {
-  font-size: clamp(0.75rem, 0.0405rem + 1.6216vw, 1.5rem);
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 31px;
+  line-height: 1.5rem;
   margin: 12px 0;
 }
 
@@ -273,16 +279,16 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.1rem;
   color: #901c1c;
 }
 
 .localCounter {
   margin-right: 10px;
-  font-size: clamp(0.75rem, 0.0405rem + 1.6216vw, 1.5rem);
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 31px;
+  line-height: 1.5rem;
 }
 
 button.liked {
@@ -334,10 +340,10 @@ button.liked {
   justify-content: space-between;
   padding: 35px;
   margin: auto;
-  border: 1px solid black;
+  border: 1px solid #c75f48;
   border-radius: 10px;
   background-color: #db8876;
-  width: clamp(25rem, 15.5405rem + 15.6216vw, 35rem);
+  width: clamp(25rem, 14.1304rem + 23.1884vw, 35rem);
   height: max-content;
   animation: fadeIn 0.4s both;
 }
@@ -349,19 +355,13 @@ button.liked {
 .contact_modal header {
   width: 90%;
   height: 50px;
-  font-size: clamp(2rem, 0.1081rem + 4.3243vw, 4rem);
+  font-size: 64px;
   font-style: normal;
   font-weight: 400;
 }
 
-.contact_modal header img {
-  cursor: pointer;
-  width: clamp(1.25rem, -0.5236rem + 2.0541vw, 3.125rem);
-  aspect-ratio: 1/1;
-}
-
 .contact_modal header h2 {
-  font-size: clamp(2rem, 0.1081rem + 4.3243vw, 4rem);
+  font-size: 3.2rem;
   font-weight: normal;
   text-align: center;
   margin: 0;
@@ -372,17 +372,23 @@ button.liked {
   top: 55px;
 }
 
+.contact_modal header .js_modal_close {
+  cursor: pointer;
+  width: 2rem;
+  aspect-ratio: 1/1;
+}
+
 form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 90%;
-  padding-top: clamp(6.25rem, 0.3378rem + 12.5135vw, 10.5rem);
+  padding-top: 168px;
 }
 
 form label {
   color: #312e2e;
-  font-size: clamp(1.125rem, 0.0608rem + 2.4324vw, 1.75rem);
+  font-size: 1.8rem;
 }
 
 form div {
@@ -390,19 +396,19 @@ form div {
   flex-direction: column;
   width: 100%;
   align-items: self-start;
-  margin-bottom: clamp(0.8125rem, 0.0439rem + 1.7568vw, 1.625rem);
+  margin-bottom: 26px;
 }
 
 form input,
 form textarea {
   font-family: "DM Sans", sans-serif;
-  font-size: 24px;
+  font-size: 1.8rem;
   font-weight: 400;
   color: rgb(80, 80, 80);
   padding-left: 10px;
   margin-bottom: 15px;
   width: 100%;
-  height: clamp(2.125rem, 0.1149rem + 4.5946vw, 4.25rem);
+  height: 68px;
   border: none;
   border-radius: 5px;
 }
@@ -410,8 +416,8 @@ form textarea {
 form textarea {
   min-width: 100%;
   max-width: 100%;
-  min-height: clamp(4.6875rem, 0.2534rem + 10.1351vw, 9.375rem);
-  max-height: clamp(7.8125rem, 0.4223rem + 16.8919vw, 15.625rem);
+  min-height: 150px;
+  max-height: 250px;
 }
 
 .label {
@@ -424,8 +430,15 @@ form textarea {
 .errorMessage {
   display: none;
   font-size: 14px;
-  padding: 5px;  
-  color: rgb(255, 255, 255);  
+  padding: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.sendMessage {
+  cursor: pointer;
+  width: 10rem;
+  height: 4rem;
+  font-size: 1.5rem;
 }
 
 @keyframes fadeIn {

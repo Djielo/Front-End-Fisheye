@@ -1,7 +1,7 @@
 //Récupère les données du fichier "photographers.json" pour pouvoir les exploiter
 export const getDatas = async (array, target) => {
   // Avec "fetch", on récupère toutes les datas du fichier "json"
-  await fetch("data/photographers.json")
+  await fetch("scripts/datas/photographers.json")
     // Quand on a une réponse comme quoi notre fichier "json" existe (voir avec Enzo le "then, etc...")
     .then((response) => response.json())
     .then((promise) => {      

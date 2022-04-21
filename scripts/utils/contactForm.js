@@ -81,7 +81,7 @@ export const contactForm = () => {
       if (everyInputValided() === true) {
         button.removeAttribute("disabled");
       } else {
-        button.setAttribute("disabled", "");
+        button.setAttribute("disabled", "");        
       }
     };
 

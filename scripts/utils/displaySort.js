@@ -1,4 +1,4 @@
-import { Lightbox } from "../../js/lightbox.js";
+import { Lightbox } from "../lightbox/lightbox.js";
 import { displayMedia } from "../factories/mediaFactory.js";
 import { likesCounter } from "./likesCounter.js";
 

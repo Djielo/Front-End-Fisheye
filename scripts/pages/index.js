@@ -1,5 +1,5 @@
 // import de la fonction "getDatas"
-import { getDatas } from "../../data/getDatas.js";
+import { getDatas } from "../datas/getDatas.js";
 
 // Création d'un tableau vide qui contiendra toutes les informations des photographes
 const dataPhotographers = [];

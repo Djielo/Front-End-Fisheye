@@ -1,6 +1,6 @@
 // import de toutes les fonctions necessaires au fonctionnement de ce constructeur
-import { getDatas } from "../../data/getDatas.js";
-import { Lightbox } from "../../js/lightbox.js";
+import { getDatas } from "../datas/getDatas.js";
+import { Lightbox } from "../lightbox/lightbox.js";
 import { displaySort } from "../utils/displaySort.js";
 import { displayThisPhotographer } from "../utils/displayThisPhotographer.js";
 import { getInfosThisPhotographer } from "../utils/getInfosThisPhotographer.js";
