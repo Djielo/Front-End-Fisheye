@@ -16,12 +16,12 @@ class Media {
     this._mediaContent.insertAdjacentHTML(
       "afterbegin",
       `
-      <article tabindex="0">
+      <article >
         ${media}  
-        <div tabindex="0">
-          <p>${this._media.title}</p>
+        <div>
+          <p tabindex="0">${this._media.title}</p>
           <div>
-            <div class="localCounter">${this._media.likes}</div>
+            <div tabindex="0" class="localCounter">${this._media.likes}</div>
             <button tabindex="0" class="unliked btn_heart"><i class="fas fa-heart"></i></button>
           </div>
         </div>
@@ -31,12 +31,12 @@ class Media {
   }
 
   image() {
-    this._image = `<a href="${this._thumbs}${this._media.image}"><img src= ${this._thumbs}${this._media.image} alt="${this._media.title}"/></a>`;
+    this._image = `<a tabindex="0" href="${this._thumbs}${this._media.image}"><img tabindex="-1" src= ${this._thumbs}${this._media.image} alt="${this._media.title}"/></a>`;
     this.init(this._image);
   }
 
   video() {
-    this._video = `<a href="${this._thumbs}${this._media.video}"><video src= ${this._thumbs}${this._media.video} alt="${this._media.title}"/></a>`;
+    this._video = `<a tabindex="0" href="${this._thumbs}${this._media.video}"><video tabindex="-1" src= ${this._thumbs}${this._media.video} alt="${this._media.title}"/></a>`;
     this.init(this._video);
   }
 }

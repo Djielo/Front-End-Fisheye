@@ -46,20 +46,22 @@
         </header>
         <form>
           <div>
-            <label for="prenom">Prénom</label>
-            <input id="prenom" type="text" name="prenom" />
-            <label for="nom">Nom</label>
-            <input id="nom" type="text" name="nom" />
-            <label for="email">Email</label>
+            <label for="firstname" class="label">
+              <span class="item">Prénom</span>
+              <span class="errorMessage">Doit contenir 2 caractères mini</span>
+            </label>
+            <input id="firstname" type="text" name="prenom" />
+            <label for="name" class="label"><span class="item">Nom</span><span class="errorMessage">Doit contenir 2 caractères mini</span></label>
+            <input id="name" type="text" name="nom" />
+            <label for="email" class="label"><span class="item">Email</span><span class="errorMessage">Veuillez entrer une adresse valide</span></label>
             <input id="email" type="text" name="email" />
-            <label for="message">Votre message</label>
+            <label for="message" class="label"><span class="item">Votre message</span><span class="errorMessage">Doit contenir 5 mots mini</span></label>
             <textarea id="message" name="message"></textarea>
           </div>
-          <button class="contact_button">Envoyer</button>
+          <button class="sendMessage" disabled>Envoyer</button>
         </form>
       </div>
     </aside>
-    <script src="scripts/pages/photographer.js" type="module"></script>
-    <script src="scripts/utils/contactForm.js"></script>
+    <script src="scripts/pages/photographer.js" type="module"></script>    
   </body>
 </html>

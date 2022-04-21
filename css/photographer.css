@@ -7,6 +7,7 @@ body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
 }
+
 /******************************************************* HEADER */
 header {
   position: absolute;
@@ -251,9 +252,11 @@ main {
   width: 100%;
   height: max-content;
 }
+
 .photographer_images article img,
 .photographer_images article video {
   width: 100%;
+  height: auto;
   aspect-ratio: 3.5/3;
   object-fit: cover;
 }
@@ -409,6 +412,20 @@ form textarea {
   max-width: 100%;
   min-height: clamp(4.6875rem, 0.2534rem + 10.1351vw, 9.375rem);
   max-height: clamp(7.8125rem, 0.4223rem + 16.8919vw, 15.625rem);
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.errorMessage {
+  display: none;
+  font-size: 14px;
+  padding: 5px;  
+  color: rgb(255, 255, 255);  
 }
 
 @keyframes fadeIn {
