@@ -14,6 +14,10 @@ button {
   font-family: "DM Sans", sans-serif;
 }
 
+section h2 {
+  display: none;
+}
+
 /******************************************************* HEADER */
 header {
   position: absolute;
