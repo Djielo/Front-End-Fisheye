@@ -28,7 +28,7 @@ header {
 
 .logo {
   height: 3rem;
-  margin-left: 100px;
+  margin-left: 5vw;
 }
 
 /******************************************************* MAIN */
@@ -351,7 +351,7 @@ button.liked {
   border-radius: 10px;
   background-color: #db8876;
   width: clamp(25rem, 14.1304rem + 23.1884vw, 35rem);
-  height: max-content;
+  height: 90vh;
   animation: fadeIn 0.4s both;
 }
 
@@ -390,7 +390,7 @@ form {
   flex-direction: column;
   align-items: flex-start;
   width: 90%;
-  padding-top: 168px;
+  padding-top: 135px;
 }
 
 form label {

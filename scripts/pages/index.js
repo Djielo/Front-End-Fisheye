@@ -1,16 +1,15 @@
 // import de la fonction "getDatas"
 import { getDatas } from "../datas/getDatas.js";
 
-// Création d'un tableau vide qui contiendra toutes les informations des photographes
+// Servira à stocker les datas de TOUS les photographes
 const dataPhotographers = [];
-// Va cibler l'élément html contenant la classe ".photographers_section"
 const photographersSection = document.querySelector(".photographers_section");
-// Variable contenant de début du lien allant chercher le portrait de chaque photographe
+// Variable contenant de début du lien allant chercher le fichier du portrait de chaque photographe
 const picture = "assets/images/Sample_Photos/Photographers_ID_Photos/";
 // Variable contenant le début du lien redirigeant vers la page des différents photographes
 const link = `photographer.html?id=`;
 
-// Cette fonction permettra d'afficher les infos [choisies] de chaque photographe
+// CETTE FONCTION PERMETTRA D'AFFICHER LES INFOS [CHOISIES] DE CHAQUE PHOTOGRAPHE
 const displayPhotographers = async () => {
   // Une fois les infos tirés de la partie "photographers" du json injectées dans le tableau "dataPhotographers"
   await getDatas(dataPhotographers, "photographers");

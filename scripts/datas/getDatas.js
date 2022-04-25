@@ -1,13 +1,14 @@
-//Récupère les données du fichier "photographers.json" pour pouvoir les exploiter
+//RECUPERE LES DONNEES DU JSON POUR POUVOIR LES EXPLOITER
+
 export const getDatas = async (array, target) => {
   // Avec "fetch", on récupère toutes les datas du fichier "json"
   await fetch("scripts/datas/photographers.json")
-    // Quand on a une réponse comme quoi notre fichier "json" existe (voir avec Enzo le "then, etc...")
+    // Permet de savoir s'il y a du contenu dans le json !
     .then((response) => response.json())
     .then((promise) => {      
-      //On stocke les données dans deux tableaux distincts. Un tableau "dataPhotographers" et un tableau "dataMedia"
-      // "promise" crée un tableau, le "spread operator" permet de destructurer ce tableau tout en conservant les valeurs
-      // On "push" les données dans chaque tableau selon sa cible // Ex: dans le tableau "dataPhotographers, on push le contenu "photographers" du json !
+      // On stocke les données dans deux tableaux distincts. Un tableau "dataPhotographers" et un tableau "dataMedia"
+      // "promise" crée un tableau, le "spread operator (...)" permet de destructurer ce tableau tout en conservant les valeurs
+      // On "push" les données json obtenues par "promise" dans chaque "array" selon sa "target"
       array.push(...promise[target]);
     });
 };

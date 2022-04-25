@@ -25,6 +25,7 @@ export class Lightbox {
    * @param {string} url URL de l'image
    * @param {string[]} images Chemin des images de la lightbox
    */
+  
   constructor(url, images) {
     this.element = this.buildDOM(url);
     this.images = images;

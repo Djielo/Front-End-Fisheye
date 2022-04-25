@@ -1,5 +1,5 @@
-// Permet d'obtenir les informations du photographe actuel
-// Paramètres = tableau, nouveau tableau, id correspond au photographe que ce soit dans la partie "media" ou "photographer"
+// PERMET D'OBTENIR LES INFOS ET MEDIAS DU PHOTOGRAPHE ACTUEL PAR RAPPORT A SON ID
+
 export const getInfosThisPhotographer = (array, newArray, photographerOrMediaId) => {
   // Récupère l'id du photographe dans l'url
   let currentId = document.location.href.split("?id=")[1];
