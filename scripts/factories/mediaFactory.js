@@ -22,7 +22,7 @@ class Media {
           <p tabindex="0">${this._media.title}</p>
           <div>
             <div tabindex="0" class="localCounter">${this._media.likes}</div>
-            <button tabindex="0" class="unliked btn_heart"><i class="fas fa-heart"></i></button>
+            <button tabindex="0" class="unliked btn_heart"><span class="fas fa-heart"></span></button>
           </div>
         </div>
       </article>
