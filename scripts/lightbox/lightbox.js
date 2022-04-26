@@ -9,14 +9,15 @@ import { enableBodyScroll, disableBodyScroll } from "./bodyScrollLock.js";
 export class Lightbox {
   // Permet d'initialiser la lightbox
   static init() {
-    // On récupère tous les liens des images afin d'afficher celle sur laquelle on clique
+    // On récupère et stocke tous les liens des images ou vidéo afin d'afficher celle sur laquelle on clique
     const links = Array.from(document.querySelectorAll('a[href$=".jpg"], a[href$=".mp4"]'));
+    // On récupère et stocke tous les fichiers détenant l'attribut "href"
     const gallery = links.map((link) => link.getAttribute("href"));
     links.forEach((link) =>
       link.addEventListener("click", (e) => {
         e.preventDefault();
-        // On affiche l'image dont le lien s'affiche dans l'URL
-        new Lightbox(e.currentTarget.getAttribute("href"), gallery);
+        // Crée une nouvelle lightbox à partir de l'image ou la vidéo sur laquelle on clique
+        new Lightbox(link.getAttribute("href"), gallery);
       })
     );
   }
@@ -24,12 +25,13 @@ export class Lightbox {
   /**
    * @param {string} url URL de l'image
    * @param {string[]} images Chemin des images de la lightbox
+   * 
    */
-  
+
   constructor(url, images) {
-    this.element = this.buildDOM(url);
+    this.element = this.buildDOM(url);    
     this.images = images;
-    this.loadImage(url);
+    this.loadMedia(url);
     this.onKeyUp = this.onKeyUp.bind(this);
     document.body.appendChild(this.element);
     disableBodyScroll(this.element);
@@ -39,7 +41,7 @@ export class Lightbox {
   /**
    * @param {string} url URL de l'image
    */
-  loadImage(url) {
+  loadMedia(url) {
     this.url = null;
     const container = this.element.querySelector(".lightbox__container");
     const loader = document.createElement("div");
@@ -59,7 +61,7 @@ export class Lightbox {
       let video = document.createElement("video");
       video.src = url;
       video.setAttribute("autoplay", "");
-      video.setAttribute("loop", "");      
+      video.setAttribute("loop", "");
       container.removeChild(loader);
       container.appendChild(video);
       this.url = url;
@@ -67,6 +69,7 @@ export class Lightbox {
   }
 
   /**
+   * Gère les events liés au keyboard pour la navigation au clavier
    * @param {KeyboardEvent} e
    */
   onKeyUp(e) {
@@ -95,7 +98,7 @@ export class Lightbox {
   }
 
   /**
-   * Passe à l'image suivante
+   * Passe au media suivant
    * @param {MouseEvent/KeyboardEvent} e
    * @returns
    */
@@ -105,11 +108,11 @@ export class Lightbox {
     if (i == this.images.length - 1) {
       i = -1;
     }
-    this.loadImage(this.images[i + 1]);
+    this.loadMedia(this.images[i + 1]);
   }
 
   /**
-   * Passe à l'image précédente
+   * Passe au media précédent
    * @param {MouseEvent/KeyboardEvent} e
    * @returns
    */
@@ -119,10 +122,11 @@ export class Lightbox {
     if (i == 0) {
       i = this.images.length;
     }
-    this.loadImage(this.images[i - 1]);
+    this.loadMedia(this.images[i - 1]);
   }
 
   /**
+   * Crée la lightbox dans le DOM
    * @param {string} url URL de l'image
    * @return {HTMLElement}
    */

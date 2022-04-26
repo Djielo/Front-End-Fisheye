@@ -1,4 +1,3 @@
-
 // DOM
 const form = document.querySelector("form");
 const allInputs = document.querySelectorAll("input");
@@ -6,7 +5,7 @@ const firstname = document.getElementById("firstname");
 const name = document.getElementById("name");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
-const button = document.querySelector(".sendMessage");
+const button = document.querySelector(".submit_button");
 const modal = document.getElementById("modal1");
 
 // REGEXP
@@ -81,7 +80,7 @@ export const contactForm = () => {
       if (everyInputValided() === true) {
         button.removeAttribute("disabled");
       } else {
-        button.setAttribute("disabled", "");        
+        button.setAttribute("disabled", "");
       }
     };
 
@@ -96,7 +95,7 @@ export const contactForm = () => {
       e.preventDefault();
       userData.date = new Date().toString().split(" GMT")[0];
       console.log("UserInfo", userData);
-      reset();      
+      reset();
     });
   };
   inputValidate();

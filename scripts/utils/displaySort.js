@@ -2,6 +2,8 @@ import { Lightbox } from "../lightbox/lightbox.js";
 import { displayMedia } from "../factories/mediaFactory.js";
 import { likesCounter } from "./likesCounter.js";
 
+
+// PERMET DE FAIRE LE TRI ET DE LE VISUALISER
 export const displaySort = (thisMedia, thisPhotographer) => {
   let menu = document.querySelectorAll(".menu");
   const span = document.querySelector(".span");
@@ -26,6 +28,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
   };
   sortDefault();
 
+  // Tri selon le clic sur Date, popularité (like) ou titre des medias
   menu.forEach((element) => {
     element.addEventListener("click", () => {
       //
@@ -34,8 +37,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
       if (element.innerText == "Date") {
         thisMedia.sort((a, b) => {
           return a.date < b.date ? -1 : 1;
-        });
-        console.log(element.innerText);
+        });        
         if (element.innerText == "Date" && element.classList.contains("pos2")) {
           storageTempo = position1.innerText;
           position1.innerText = position2.innerText;
@@ -53,8 +55,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
       else if (element.innerText == "Popularité") {
         thisMedia.sort((a, b) => {
           return a.likes < b.likes ? -1 : 1;
-        });
-        console.log(element.innerText);
+        });        
         if (element.innerText == "Popularité" && element.classList.contains("pos2")) {
           storageTempo = position1.innerText;
           position1.innerText = position2.innerText;
@@ -71,8 +72,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
       else if (element.innerText == "Titre") {
         thisMedia.sort((a, b) => {
           return a.title > b.title ? -1 : 1;
-        });
-        console.log(element.innerText);
+        });        
         if (element.innerText == "Titre" && element.classList.contains("pos2")) {
           storageTempo = position1.innerText;
           position1.innerText = position2.innerText;
@@ -83,7 +83,7 @@ export const displaySort = (thisMedia, thisPhotographer) => {
           position3.innerText = storageTempo;
         }
       }
-      //
+      // PERMET D'INITIALISER LE CONTENU DU TALEAU APRES CHAQUE TRI
       // Crée un tableau à partir de l'HTMLCollection et y inclut les articles contenus (children)
       let arrayArticles = Array.from(document.querySelector(".photographer_images").children);
       // Efface chaque article du tableau

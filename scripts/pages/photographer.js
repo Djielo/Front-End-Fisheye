@@ -5,7 +5,7 @@ import { displaySort } from "../utils/displaySort.js";
 import { displayThisPhotographer } from "../utils/displayThisPhotographer.js";
 import { getInfosThisPhotographer } from "../utils/getInfosThisPhotographer.js";
 import { likesCounter } from "../utils/likesCounter.js";
-import { sortDropdown } from "../utils/sortDropdown.js";
+import { dropdownOpenOrClose } from "../utils/dropdownOpenOrClose.js";
 import { displayMedia } from "../factories/mediaFactory.js";
 import { contactFormEvents } from "../utils/contactFormEvents.js";
 
@@ -23,7 +23,7 @@ const displayGlobal = async () => {
   await getDatas(dataMedia, "media");
 
   // Récupère les infos et medias du photographe liés au currentId...
-  getInfosThisPhotographer(dataPhotographers, thisPhotographer, "id");  
+  getInfosThisPhotographer(dataPhotographers, thisPhotographer, "id");
   getInfosThisPhotographer(dataMedia, thisMedia, "photographerId");
   // ... et les affiche
   displayThisPhotographer(thisPhotographer);
@@ -31,8 +31,8 @@ const displayGlobal = async () => {
   displayMedia(thisMedia, thisPhotographer);
   // Gère modale, menu déroulant, compteur de like et lightbox
   contactFormEvents();
-  sortDropdown();
-  likesCounter();  
+  dropdownOpenOrClose();
+  likesCounter();
   Lightbox.init();
 };
 

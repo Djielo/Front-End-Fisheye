@@ -35,14 +35,14 @@
       <section tabindex="0" class="photographer_images"><h2>Section image de la page du photographe</h2></section>
     </main>
     <div class="cta_all">
-      <div class="cta_heart"></div>
-      <div class="cta_days"></div>
+      <div class="cta_global_counter_heart"></div>
+      <div class="cta_price_day"></div>
     </div>
-    <aside id="modal1" class="contact_modal" aria-hidden="true" aria-labelledby="titlemodal" style="display:none">
+    <aside id="modal1" class="contact_modal" aria-hidden="true" aria-labelledby="titlemodal" style="display: none">
       <div class="modal1 js_modal_stoprop">
         <header>
           <h2 id="titlemodal">Contactez-moi</h2>
-          <img src="assets/icons/close.svg" alt="bouton de fermeture de la modale de contact" class="js_modal_close"/>
+          <img src="assets/icons/close.svg" alt="bouton de fermeture de la modale de contact" class="js_modal_close" />
           <h2 class="modal_photographer_name">Name Photographer</h2>
         </header>
         <form>
@@ -52,17 +52,23 @@
               <span class="errorMessage">Doit contenir 2 caractères mini</span>
             </label>
             <input id="firstname" type="text" name="prenom" />
-            <label for="name" class="label"><span class="item">Nom</span><span class="errorMessage">Doit contenir 2 caractères mini</span></label>
+            <label for="name" class="label"
+              ><span class="item">Nom</span><span class="errorMessage">Doit contenir 2 caractères mini</span></label
+            >
             <input id="name" type="text" name="nom" />
-            <label for="email" class="label"><span class="item">Email</span><span class="errorMessage">Veuillez entrer une adresse valide</span></label>
+            <label for="email" class="label"
+              ><span class="item">Email</span><span class="errorMessage">Veuillez entrer une adresse valide</span></label
+            >
             <input id="email" type="text" name="email" />
-            <label for="message" class="label"><span class="item">Votre message</span><span class="errorMessage">Doit contenir 5 mots mini</span></label>
+            <label for="message" class="label"
+              ><span class="item">Votre message</span><span class="errorMessage">Doit contenir 5 mots mini</span></label
+            >
             <textarea id="message" name="message"></textarea>
           </div>
-          <button class="sendMessage" disabled>Envoyer</button>
+          <button class="submit_button" disabled>Envoyer</button>
         </form>
       </div>
     </aside>
-    <script src="scripts/pages/photographer.js" type="module"></script>    
+    <script src="scripts/pages/photographer.js" type="module"></script>
   </body>
 </html>

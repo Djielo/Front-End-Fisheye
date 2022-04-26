@@ -27,7 +27,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: clamp(2.5rem, -0.8967rem + 7.2464vw, 5.625rem);
-  width: 100%;  
+  width: 100%;
 }
 
 .logo {
@@ -43,7 +43,7 @@ main {
   justify-content: center;
   align-items: center;
   max-width: clamp(46.875rem, 0rem + 100vw, 105rem);
-  height: auto;  
+  height: auto;
   top: 140px;
 }
 
@@ -117,7 +117,7 @@ main {
 .photographer_picture {
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .photographer_picture img {
@@ -294,7 +294,7 @@ main {
   color: #901c1c;
 }
 
-.localCounter {
+.local_counters {
   margin-right: 10px;
   font-size: 1.2rem;
   font-style: normal;
@@ -321,15 +321,15 @@ button.liked {
   position: fixed;
 }
 
-.cta_heart,
-.cta_days {
+.cta_global_counter_heart,
+.cta_price_day {
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: 31px;
 }
 
-.btn_heart {
+.buttons_heart {
   cursor: pointer;
   border: none;
   background: transparent;
@@ -445,7 +445,7 @@ form textarea {
   color: rgb(255, 255, 255);
 }
 
-.sendMessage {
+.submit_button {
   cursor: pointer;
   width: 10rem;
   height: 4rem;

@@ -6,9 +6,9 @@ export const contactFormEvents = () => {
   let focusables = [];
   let previousFocusedElement = null;
 
-  const btnOpenModal = document.querySelector(".js_modal");
+  const btnOpenModal = document.querySelector(".btn_open_modal");
   const contactModal = document.querySelector(".contact_modal");
-  const submitButton = document.querySelector(".sendMessage");
+  const submitButton = document.querySelector(".submit_button");
 
   const openModal = function (e) {
     e.preventDefault();

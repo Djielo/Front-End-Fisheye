@@ -1,13 +1,11 @@
+// PERMET L'AFFICHAGE PERSONNALISÉ DU HEADER, DU PRIX ET DE LA MODALE
 export const displayThisPhotographer = (thisPhotographer) => {
-  // On crée une variable dans laquelle on récupère la classe ".photographer_header"
   const photographerHeader = document.querySelector(".photographer_header");
-  // On crée une variable dans laquelle on récupère la classe ".cta_days"
-  const price = document.querySelector(".cta_days");
-  // On crée une variable dans laquelle on récupère la classe ".cta_days"
+  const priceDay = document.querySelector(".cta_price_day");
   const modalPhotographerName = document.querySelector(".modal_photographer_name");
-  // On crée une variable qui contient le début du lien des images
   const picture = "assets/images/Sample_Photos/Photographers_ID_Photos/";
-  //On injecte le HTML ci-dessous dans la div de classe ".photographer_header"
+
+  // Injection du HTML ci-dessous dans la div de classe ".photographer_header" selon le photographe
   photographerHeader.innerHTML = thisPhotographer
     .map(
       (photographer) =>
@@ -18,7 +16,7 @@ export const displayThisPhotographer = (thisPhotographer) => {
             <p>${photographer.tagline}</p>
           </article>
           <div class="photographer_contact">
-            <button class="contact_button js_modal">Contactez-moi</button>
+            <button class="contact_button btn_open_modal">Contactez-moi</button>
           </div>
           <div class="photographer_picture">
           <img src=${picture}${photographer.portrait} alt="Portrait photo du photographe">
@@ -26,8 +24,7 @@ export const displayThisPhotographer = (thisPhotographer) => {
           `
     )
     .join("");
-  // Permet d'afficher le nom de chaque photographe sur sa modal de contact
+  // Affichage du nom et du prix selon le photographe
   modalPhotographerName.innerHTML = thisPhotographer.map((photographer) => `${photographer.name}`);
-  // Permet d'injecter le tarif de chaque photographe sur sa page
-  price.innerHTML = thisPhotographer.map((photographer) => `${photographer.price}€/jour`);
+  priceDay.innerHTML = thisPhotographer.map((photographer) => `${photographer.price}€/jour`);
 };
