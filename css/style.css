@@ -36,7 +36,7 @@ main {
 }
 
 .photographers_section {
-  height: clamp(18.75rem, -15.2174rem + 72.4638vw, 50rem);;
+  height: clamp(14.75rem, -15.2174rem + 72.4638vw, 45rem);;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
@@ -49,6 +49,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: clamp(15.625rem, 10.7143rem + 11.2245vw, 22.5rem);
 }
 
 .photographers_section article img {
