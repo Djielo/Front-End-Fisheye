@@ -363,7 +363,7 @@ button.liked {
   animation: fadeOut 0.4s both;
 }
 
-.contact_modal header {
+.contact_modal .modal1 header {
   width: 90%;
   height: 50px;
   font-size: 64px;
@@ -371,19 +371,19 @@ button.liked {
   font-weight: 400;
 }
 
-.contact_modal header h2 {
+.contact_modal .modal1 header h2 {
   font-size: 3.2rem;
   font-weight: normal;
   text-align: center;
   margin: 0;
 }
 
-.contact_modal header .modal_photographer_name {
+.contact_modal .modal1 header .modal_photographer_name {
   position: absolute;
   top: 55px;
 }
 
-.contact_modal header .js_modal_close {
+.contact_modal .modal1 header .js_modal_close {
   cursor: pointer;
   width: 2rem;
   aspect-ratio: 1/1;
