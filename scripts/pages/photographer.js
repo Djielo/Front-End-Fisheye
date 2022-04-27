@@ -10,21 +10,21 @@ import { displayMedia } from "../factories/mediaFactory.js";
 import { contactFormEvents } from "../utils/contactFormEvents.js";
 
 // Servira à stocker les datas et medias de TOUS les photographes
-const dataPhotographers = [];
-const dataMedia = [];
+const datasAllPhotographers = [];
+const datasAllMedias = [];
 // Servira à stocker les datas et medias DU photographe lié au currentId
 let thisPhotographer = [];
 let thisMedia = [];
 
 // Constructeur chargé de lancer chaque fonction créée
 const displayGlobal = async () => {
-  // Récupére les datas spécifiques "photographers" ou "media" du fichier json  et stocke dans tableau "dataPhotographers" et "dataMedia"
-  await getDatas(dataPhotographers, "photographers");
-  await getDatas(dataMedia, "media");
+  // Récupére les datas spécifiques "photographers" ou "media" du fichier json  et stocke dans tableau "datasAllPhotographers" et "datasAllMedias"
+  await getDatas(datasAllPhotographers, "photographers");
+  await getDatas(datasAllMedias, "media");
 
   // Récupère les infos et medias du photographe liés au currentId...
-  getInfosThisPhotographer(dataPhotographers, thisPhotographer, "id");
-  getInfosThisPhotographer(dataMedia, thisMedia, "photographerId");
+  getInfosThisPhotographer(datasAllPhotographers, thisPhotographer, "id");
+  getInfosThisPhotographer(datasAllMedias, thisMedia, "photographerId");
   // ... et les affiche
   displayThisPhotographer(thisPhotographer);
   displaySort(thisMedia, thisPhotographer);

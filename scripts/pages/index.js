@@ -2,7 +2,7 @@
 import { getDatas } from "../datas/getDatas.js";
 
 // Servira à stocker les datas de TOUS les photographes
-const dataPhotographers = [];
+const datasAllPhotographers = [];
 const photographersSection = document.querySelector(".photographers_section");
 // Variable contenant de début du lien allant chercher le fichier du portrait de chaque photographe
 const picture = "assets/images/Sample_Photos/Photographers_ID_Photos/";
@@ -11,11 +11,11 @@ const link = `photographer.html?id=`;
 
 // CETTE FONCTION PERMETTRA D'AFFICHER LES INFOS [CHOISIES] DE CHAQUE PHOTOGRAPHE
 const displayPhotographers = async () => {
-  // Une fois les infos tirés de la partie "photographers" du json injectées dans le tableau "dataPhotographers"
-  await getDatas(dataPhotographers, "photographers");
+  // Une fois les infos tirés de la partie "photographers" du json injectées dans le tableau "datasAllPhotographers"
+  await getDatas(datasAllPhotographers, "photographers");
   // Nous allons injecter ces différentes infos dans le html
-  // Injecter dans la balise contenant la classe ".photographers_section" les infos tirées du tableau "dataPhotographers" pour chaque photographe (.map)
-  photographersSection.innerHTML = dataPhotographers
+  // Injecter dans la balise contenant la classe ".photographers_section" les infos tirées du tableau "datasAllPhotographers" pour chaque photographe (.map)
+  photographersSection.innerHTML = datasAllPhotographers
     .map(
       (photographer) =>
         `
