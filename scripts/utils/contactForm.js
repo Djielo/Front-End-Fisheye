@@ -5,7 +5,7 @@ const firstname = document.getElementById("firstname");
 const name = document.getElementById("name");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
-const button = document.querySelector(".submit_button");
+const submitButton = document.querySelector(".submit_button");
 const modal = document.getElementById("modal1");
 
 // REGEXP
@@ -40,10 +40,12 @@ export const contactForm = () => {
     if (regex.test(input.value)) {
       userData[key] = input.value;
       checkUserInfo[key] = true;
+      // masquage de l'erreur
       input.previousElementSibling.children[1].style.display = "none";
     } else {
       checkUserInfo[key] = false;
-      button.setAttribute("disabled", "");
+      submitButton.setAttribute("disabled", "");
+      // affichage de l'erreur
       input.previousElementSibling.children[1].style.display = "block";
     }
   };
@@ -73,14 +75,14 @@ export const contactForm = () => {
       }
       refreshButtonStatement();
     });
-
+    
     const everyInputValided = () => Object.values(checkUserInfo).every((value) => value === true);
-
+    
     const refreshButtonStatement = () => {
       if (everyInputValided() === true) {
-        button.removeAttribute("disabled");
+        submitButton.removeAttribute("disabled");
       } else {
-        button.setAttribute("disabled", "");
+        submitButton.setAttribute("disabled", "");
       }
     };
 
@@ -88,10 +90,10 @@ export const contactForm = () => {
       form.reset();
       userData = new UserData();
       checkUserInfo = new CheckUserInfo();
-      button.setAttribute("disabled", "");
+      submitButton.setAttribute("disabled", "");
     };
 
-    button.addEventListener("click", (e) => {
+    submitButton.addEventListener("click", (e) => {
       e.preventDefault();
       userData.date = new Date().toString().split(" GMT")[0];
       console.log("UserInfo", userData);

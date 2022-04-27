@@ -16,7 +16,8 @@
     </header>
     <main id="main">
       <section tabindex="0" class="photographer_header"><h2 class="section_h2">Section entête de la page du photographe</h2></section>
-      <section class="photographer_sort"><h2 class="section_h2">Section tri de la page du photographe</h2>
+      <section class="photographer_sort">
+        <h2 class="section_h2">Section tri de la page du photographe</h2>
         <label tabindex="0" class="sort_text">Trier par</label>
         <div class="dropdownContainer">
           <div id="span">
@@ -36,8 +37,8 @@
       <div class="cta_global_counter_heart"></div>
       <div class="cta_price_day"></div>
     </div>
-    <aside id="modal1" class="contact_modal js_modal_stoprop" aria-hidden="true" aria-labelledby="titlemodal" style="display: none">
-      <div class="modal1">
+    <aside id="modal1" class="contact_modal" aria-hidden="true" aria-labelledby="titlemodal" style="display: none">
+      <div class="modal1 js_modal_stoprop">
         <header>
           <h2 id="titlemodal">Contactez-moi</h2>
           <img src="assets/icons/close.svg" alt="bouton de fermeture de la modale de contact" class="js_modal_close" />
@@ -59,7 +60,7 @@
             >
             <input id="email" type="text" name="email" />
             <label for="message" class="label"
-              ><span class="item">Votre message</span><span class="errorMessage">Doit contenir 5 mots mini</span></label
+              ><span class="item">Votre message</span><span class="errorMessage">Minimum 5 mots de 4 lettres</span></label
             >
             <textarea id="message" name="message"></textarea>
           </div>

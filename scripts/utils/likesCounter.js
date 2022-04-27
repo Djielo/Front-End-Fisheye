@@ -11,7 +11,8 @@ export const likesCounter = () => {
     localCounters.forEach((counter) => {
       totalCounter.push(Number(counter.innerText));
     });
-    totalCounter = totalCounter.reduce((acc, cur) => acc + cur);
+    // accumulateur + valeur courante
+    totalCounter = totalCounter.reduce((acc, cur) => acc + cur);    
     globalCounterHeart.innerHTML = `${totalCounter} <i class="fas fa-heart"></i>`;
   };
   globalCounter();
