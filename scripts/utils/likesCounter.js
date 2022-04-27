@@ -5,7 +5,7 @@ export const likesCounter = () => {
   const globalCounterHeart = document.querySelector(".cta_global_counter_heart");
 
   // Permet d'actualiser le nouveau total global selon like ou unlike sur media
-  const finalCounter = () => {
+  const globalCounter = () => {
     // Servira à stocker le total des likes des medias
     let totalCounter = [];
     localCounters.forEach((counter) => {
@@ -14,7 +14,7 @@ export const likesCounter = () => {
     totalCounter = totalCounter.reduce((acc, cur) => acc + cur);
     globalCounterHeart.innerHTML = `${totalCounter} <i class="fas fa-heart"></i>`;
   };
-  finalCounter();
+  globalCounter();
 
   // Pour chaque élément (coeur) contenant la classe ".buttons_heart"
   buttonsHeart.forEach((button) => {
@@ -35,13 +35,13 @@ export const likesCounter = () => {
         localCounter.style.color = "#d3573c";
         memoryCount++;
         refreshLike();
-        finalCounter();
+        globalCounter();
       } else {
         button.classList.replace("liked", "unliked");
         localCounter.style.color = "#901c1c";
         memoryCount--;
         refreshLike();
-        finalCounter();
+        globalCounter();
       }
     });
   });
